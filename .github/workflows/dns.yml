@@ -1,0 +1,97 @@
+# Adds one DNS record to photostead.com on Cloudflare, by hand: Actions → DNS record → Run workflow.
+# Uses the CLOUDFLARE_API_TOKEN secret (it can edit photostead.com's DNS). Type LIST only lists the
+# records there are.
+#
+# - TXT and MX records are added alongside any others with the same name (a name can hold several,
+#   like SPF and a verification code); an identical one already there is left as it is.
+# - A, AAAA and CNAME records replace the one with the same name and type, if there is one.
+name: DNS record
+
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        description: Record type
+        type: choice
+        options: [TXT, CNAME, A, AAAA, MX, LIST]
+        default: TXT
+      name:
+        description: Name under photostead.com (for example _verify or www), or @ for photostead.com itself
+      content:
+        description: Value
+      priority:
+        description: Priority (MX only)
+        default: '10'
+      proxied:
+        description: Through Cloudflare's proxy (A, AAAA and CNAME only)
+        type: boolean
+        default: false
+  push:
+    paths: ['.github/workflows/dns.yml'] # only so GitHub lists it; nothing runs on a push
+
+permissions:
+  contents: read
+
+jobs:
+  record:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CF: https://api.cloudflare.com/client/v4
+      TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      TYPE: ${{ inputs.type }}
+      NAME: ${{ inputs.name }}
+      CONTENT: ${{ inputs.content }}
+      PRIORITY: ${{ inputs.priority }}
+      PROXIED: ${{ inputs.proxied }}
+    steps:
+      - name: Add the record
+        run: |
+          set -euo pipefail
+          api() { curl -sS -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' "$@"; }
+          zone=$(api "$CF/zones?name=photostead.com" | jq -r '.result[0].id // empty')
+          [ -n "$zone" ] || { echo "::error::The Cloudflare token can't see photostead.com"; exit 1; }
+          if [ "$TYPE" = LIST ]; then
+            api "$CF/zones/$zone/dns_records?per_page=500" |
+              jq -r '.result | sort_by(.type, .name)[] | [.type, .name, (.priority // "" | tostring), .content, (if .proxied then "proxied" else "" end)] | @tsv' |
+              tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          [ -n "$NAME" ] && [ -n "$CONTENT" ] || { echo "::error::A record needs a name and a value"; exit 1; }
+          case "$NAME" in
+            '@' | photostead.com) fqdn=photostead.com ;;
+            *.photostead.com) fqdn=$NAME ;;
+            *) fqdn="$NAME.photostead.com" ;;
+          esac
+          body=$(jq -n --arg type "$TYPE" --arg name "$fqdn" --arg content "$CONTENT" --arg prio "$PRIORITY" --arg proxied "$PROXIED" '
+            {type: $type, name: $name, content: $content, ttl: 1}
+            + (if $type == "MX" then {priority: ($prio | tonumber)} else {} end)
+            + (if $type == "A" or $type == "AAAA" or $type == "CNAME" then {proxied: ($proxied == "true")} else {} end)')
+          records=$(api -G "$CF/zones/$zone/dns_records" --data-urlencode "type=$TYPE" --data-urlencode "name=$fqdn")
+          # Cloudflare may keep a TXT value in quotes
+          if jq -e --arg c "$CONTENT" '.result | any(.content == $c or .content == ("\"" + $c + "\""))' <<<"$records" >/dev/null; then
+            echo "$TYPE $fqdn \"$CONTENT\" is already there."
+            exit 0
+          fi
+          existing=$(jq -r '.result[0].id // empty' <<<"$records")
+          if [ -n "$existing" ] && [[ "$TYPE" =~ ^(A|AAAA|CNAME)$ ]]; then
+            out=$(api -X PUT "$CF/zones/$zone/dns_records/$existing" --data "$body")
+          else
+            out=$(api -X POST "$CF/zones/$zone/dns_records" --data "$body")
+          fi
+          if ! jq -e '.success' <<<"$out" >/dev/null; then
+            echo "::error::Cloudflare said: $(jq -c '.errors' <<<"$out")"
+            exit 1
+          fi
+          echo "Added $TYPE $fqdn \"$CONTENT\"" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Look it up
+        if: inputs.type != 'LIST'
+        run: |
+          case "$NAME" in '@' | photostead.com) fqdn=photostead.com ;; *.photostead.com) fqdn=$NAME ;; *) fqdn="$NAME.photostead.com" ;; esac
+          for try in 1 2 3 4 5 6; do
+            got=$(dig +short "$TYPE" "$fqdn" @1.1.1.1 || true)
+            [ -n "$got" ] && break
+            sleep 5
+          done
+          echo "dig $TYPE $fqdn @1.1.1.1 → ${got:-nothing yet}"

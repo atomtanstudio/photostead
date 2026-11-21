@@ -1,0 +1,79 @@
+-- Pairing: finds what belongs together across a person's library. Writes; not viewer reads
+-- (gate_test.go allows this file to name the assets table).
+
+-- name: PairLivePhotosByIdentifier :execrows
+-- Apple writes one ContentIdentifier into both halves of a Live Photo.
+WITH candidates AS (
+    SELECT DISTINCT ON (s.id) s.id AS still, v.id AS clip
+    FROM assets s
+    JOIN assets v ON v.owner_id = s.owner_id AND v.content_identifier = s.content_identifier
+    WHERE s.type = 'image' AND v.type = 'video'
+      AND s.live_motion_id IS NULL AND v.motion_of IS NULL
+    ORDER BY s.id, v.id
+), pairs AS (
+    SELECT DISTINCT ON (clip) still, clip FROM candidates ORDER BY clip, still
+), stills AS (
+    UPDATE assets a SET live_motion_id = p.clip, updated_at = now()
+    FROM pairs p WHERE a.id = p.still
+    RETURNING a.id, a.live_motion_id
+)
+UPDATE assets v SET motion_of = s.id, updated_at = now()
+FROM stills s WHERE v.id = s.live_motion_id;
+
+-- name: PairLivePhotosByName :execrows
+-- Live Photos exported without identifiers: IMG_0001.HEIC + IMG_0001.MOV in the same folder,
+-- from an Apple device, with a clip of a few seconds. (AI tools also save a video next to an
+-- image of the same name; those are never Apple-made, so they don't pair.)
+WITH candidates AS (
+    SELECT DISTINCT ON (sf.asset_id) sf.asset_id AS still, vf.asset_id AS clip
+    FROM files sf
+    JOIN files vf ON vf.library_id = sf.library_id AND vf.stem = sf.stem AND vf.state = 'present' AND vf.kind = 'video'
+    JOIN assets s ON s.id = sf.asset_id
+    JOIN assets v ON v.id = vf.asset_id
+    JOIN asset_metadata m ON m.asset_id = s.id
+    WHERE sf.state = 'present' AND sf.kind = 'image'
+      AND lower(substring(sf.rel_path from '\.([^./]+)$')) IN ('heic', 'heif', 'jpg', 'jpeg')
+      AND lower(substring(vf.rel_path from '\.([^./]+)$')) IN ('mov', 'mp4')
+      AND m.make ILIKE 'apple%'
+      AND v.duration_ms BETWEEN 300 AND 4000
+      AND s.id <> v.id AND s.live_motion_id IS NULL AND v.motion_of IS NULL
+    ORDER BY sf.asset_id, vf.asset_id
+), pairs AS (
+    SELECT DISTINCT ON (clip) still, clip FROM candidates ORDER BY clip, still
+), stills AS (
+    UPDATE assets a SET live_motion_id = p.clip, updated_at = now()
+    FROM pairs p WHERE a.id = p.still
+    RETURNING a.id, a.live_motion_id
+)
+UPDATE assets v SET motion_of = s.id, updated_at = now()
+FROM stills s WHERE v.id = s.live_motion_id;
+
+-- name: StackRawJpegPairs :one
+-- DSC_0001.NEF + DSC_0001.JPG in the same folder become one stack with the JPEG on top.
+WITH candidates AS (
+    SELECT DISTINCT ON (rf.asset_id) rf.asset_id AS raw, jf.asset_id AS jpeg, r.owner_id
+    FROM files rf
+    JOIN files jf ON jf.library_id = rf.library_id AND jf.stem = rf.stem AND jf.state = 'present' AND jf.kind = 'image'
+    JOIN assets r ON r.id = rf.asset_id
+    WHERE rf.state = 'present' AND rf.kind = 'image'
+      AND lower(substring(rf.rel_path from '\.([^./]+)$')) IN ('dng', 'cr2', 'cr3', 'crw', 'nef', 'nrw', 'arw', 'srf', 'sr2', 'orf',
+                                                             'rw2', 'raf', 'pef', 'srw', '3fr', 'erf', 'kdc', 'mrw', 'x3f', 'iiq', 'raw')
+      AND lower(substring(jf.rel_path from '\.([^./]+)$')) IN ('jpg', 'jpeg', 'heic', 'heif')
+      AND rf.asset_id <> jf.asset_id
+      AND NOT EXISTS (SELECT 1 FROM stack_assets sa WHERE sa.asset_id = rf.asset_id OR sa.asset_id = jf.asset_id)
+      AND NOT EXISTS (SELECT 1 FROM stack_exclusions x WHERE (x.asset_id = rf.asset_id OR x.asset_id = jf.asset_id) AND x.kind = 'raw_jpeg')
+    ORDER BY rf.asset_id, jf.asset_id
+), pairs AS (
+    SELECT DISTINCT ON (jpeg) raw, jpeg, owner_id FROM candidates ORDER BY jpeg, raw
+), new_stacks AS (
+    INSERT INTO stacks (owner_id, kind, cover_asset_id, state)
+    SELECT owner_id, 'raw_jpeg', jpeg, 'confirmed' FROM pairs
+    RETURNING id, cover_asset_id
+), members AS (
+    INSERT INTO stack_assets (stack_id, asset_id, position)
+    SELECT ns.id, p.jpeg, 0 FROM new_stacks ns JOIN pairs p ON p.jpeg = ns.cover_asset_id
+    UNION ALL
+    SELECT ns.id, p.raw, 1 FROM new_stacks ns JOIN pairs p ON p.jpeg = ns.cover_asset_id
+    RETURNING stack_id
+)
+SELECT count(DISTINCT stack_id)::bigint AS stacks FROM members;

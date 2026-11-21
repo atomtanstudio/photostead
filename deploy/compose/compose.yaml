@@ -1,0 +1,38 @@
+# Photostead with Docker Compose: Synology's Container Manager (Project › Create), Portainer
+# (Stacks › Add stack), CasaOS, TrueNAS (custom app, from YAML), or `docker compose up -d` here.
+#
+# 1. Change the paths on the left of each volume to folders on your machine.
+# 2. Set PUID and PGID to the user who owns them (`id` on the machine; 1026 and 100 are typical
+#    on a Synology, 99 and 100 on Unraid).
+# 3. Start it, open http://<this machine>:4800 and create the first account. A checklist on the
+#    timeline walks through the rest.
+#
+# It needs a 64-bit x86 or ARM machine with 4 GB of memory (8 GB is better), and fast storage for
+# data: about 0.65 GB for every 1,000 photos and videos. See the guide, docs/guide.md.
+
+name: photostead
+
+services:
+  photostead:
+    image: ghcr.io/atomtanstudio/photostead:${PHOTOSTEAD_VERSION:-latest}
+    container_name: photostead
+    restart: unless-stopped
+    ports:
+      - "4800:4800"
+    shm_size: 1gb # the database's workspace
+    stop_grace_period: 60s # time for the database to shut down cleanly
+    environment:
+      TZ: America/New_York # your time zone: dates in the library follow it until each person picks their own
+      PUID: "1000" # who owns your photo folders
+      PGID: "1000"
+      # PHOTOSTEAD_PUBLIC_URL: https://photos.example.com # behind your own domain or a Cloudflare Tunnel
+      # PHOTOSTEAD_SECURE_COOKIES: "true" # when that address is https
+      # PHOTOSTEAD_TRUSTED_PROXIES: "private, 100.101.102.103" # a proxy that isn't on this machine, its Docker networks or your home network
+    volumes:
+      # The database, thumbnails and previews. Fast storage (an SSD) is best.
+      - ./photostead/data:/data
+      # Uploads and phone backups, filed by person and date, and nightly copies of the database.
+      - ./photostead/photos:/photos
+      # Folders you already have: indexed where they are, read-only, never written to. One line each,
+      # named under /libraries.
+      # - /path/to/your/pictures:/libraries/pictures:ro

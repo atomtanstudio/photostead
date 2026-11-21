@@ -1,0 +1,25 @@
+PHOTOSTEAD CAPTURE — INSTALL
+
+1. Load this folder as an unpacked extension:
+   the capture folder of this repository
+   In Brave: brave://extensions → Developer mode → Load unpacked.
+   (Chrome and Edge use their own extensions page.)
+
+2. Pin Photostead Capture (the Photostead house icon).
+
+3. Pair it with Photostead. In Photostead, open Devices & remote access (in the left
+   rail) and choose Show a pairing code. Click Copy beside "paste the link", then open
+   Photostead Capture's popup, paste it into Pairing link or code, and click Pair.
+   Allow access to the addresses it asks for: home (for example http://192.168.1.10:4800) and your
+   tailnet (https://photostead.<tailnet>.ts.net). It uses whichever answers, so saving
+   works at home and, with Tailscale on, away.
+   (Typing the code works too: then also fill in Photostead's address.)
+
+4. Refresh your X, CivitAI, Instagram, TikTok and Pinterest tabs. Click the Photostead
+   button on a post to save its images and videos, with the post's text, author and
+   link, to Photostead. (After updating from a version that only did X, the browser may
+   ask to allow the new sites; allow it, or the buttons won't appear there.)
+
+It shows in Devices & remote access as "Photostead Capture in Brave on Mac", where it
+can be signed out. An API key (photostead apikey add) still works instead of pairing:
+see "Use an API key instead" in the popup.

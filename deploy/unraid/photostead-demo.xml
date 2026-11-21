@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>photostead-demo</Name>
+  <Repository>photostead:demo</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://photostead.com</Support>
+  <Project>https://photostead.com</Project>
+  <Overview>The App Review demo server: a second Photostead with the website's demo household, apart from the household's own. Reached as https://demo.photostead.com through a Cloudflare Tunnel. Uploads are answered and thrown away. Made by deploy/unraid/demo-on-unraid.sh.</Overview>
+  <Category>MediaApp:Photos</Category>
+  <WebUI>http://[IP]:[PORT:4810]/</WebUI>
+  <Icon/>
+  <ExtraParams>--stop-timeout 60 --shm-size=1g --memory=6g</ExtraParams>
+  <DateInstalled/>
+  <Config Name="Web UI" Target="4800" Default="4810" Mode="tcp" Description="The demo's web app and API" Type="Port" Display="always" Required="true" Mask="false">4810</Config>
+  <Config Name="App data" Target="/data" Default="/mnt/user/appdata/photostead-demo" Mode="rw" Description="Database, the demo's photos, thumbnails and previews" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/photostead-demo</Config>
+  <Config Name="PHOTOSTEAD_MANAGED_ROOT" Target="PHOTOSTEAD_MANAGED_ROOT" Default="/data/photos" Mode="" Description="Where the demo's photos live" Type="Variable" Display="advanced" Required="false" Mask="false">/data/photos</Config>
+  <Config Name="PHOTOSTEAD_BACKUP_DIR" Target="PHOTOSTEAD_BACKUP_DIR" Default="off" Mode="" Description="No nightly database copies (the clean copy is the backup)" Type="Variable" Display="advanced" Required="false" Mask="false">off</Config>
+  <Config Name="PHOTOSTEAD_PUBLIC_URL" Target="PHOTOSTEAD_PUBLIC_URL" Default="https://demo.photostead.com" Mode="" Description="The address App Review reaches it at" Type="Variable" Display="advanced" Required="false" Mask="false">https://demo.photostead.com</Config>
+  <Config Name="PHOTOSTEAD_DISCARD_UPLOADS" Target="PHOTOSTEAD_DISCARD_UPLOADS" Default="on" Mode="" Description="on: uploads are answered as filed, then thrown away (off only to load the demo household)" Type="Variable" Display="advanced" Required="false" Mask="false">on</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User to run as" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group to run as" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>

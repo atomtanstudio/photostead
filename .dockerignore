@@ -1,0 +1,12 @@
+# Only the server, the web app, the AI worker and the container files go into the build.
+*
+!server/
+!web/
+!worker/
+!deploy/docker/
+web/node_modules/
+web/dist/
+web/*.tsbuildinfo
+server/internal/testdata/
+worker/**/__pycache__/
+worker/*.egg-info/

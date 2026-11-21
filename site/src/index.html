@@ -1,0 +1,264 @@
+<!-- {"title": "Photostead: a home for every photo", "description": "Photostead is a private photo and video library for your household, on your own server. Beautiful, fast, finds anything by description, and backs up your iPhone.", "path": "/", "scheme": "dark", "body": "landing"} -->
+<!doctype html>
+<html lang="en">
+<head>
+<!-- include:head -->
+</head>
+<body class="landing">
+<!-- include:header -->
+<main id="main">
+
+  <!-- Hero: the app itself, over a wall of the demo library's photos -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wall" aria-hidden="true">{{wall}}</div>
+    <button type="button" class="calm-btn" data-calm>{{icon:pause}}<span>Pause motion</span></button>
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Photostead · <b>a photo library for your household</b></p>
+      <h1 id="hero-title" class="display" data-reveal style="--d: 0.05s">A <em class="s">home</em> for<br />every photo.</h1>
+      <p class="lede" data-reveal style="--d: 0.12s">
+        Photostead keeps your family’s photos and videos on your own server, not someone else’s cloud. It’s fast and calm to browse,
+        <b>finds anything you can describe</b>, and comes with an app that backs up your iPhone while you sleep.
+      </p>
+      <div class="actions" data-reveal style="--d: 0.18s">
+        <a class="btn" href="/demo/">Explore the live demo {{icon:arrow}}</a>
+        {{appStore:Coming soon for iPhone}}
+      </div>
+      <p class="hero-note" data-reveal style="--d: 0.24s"><span>Free</span><span>Open source</span><span>Your server</span><span>No ads</span><span>No tracking</span></p>
+    </div>
+    <figure class="window" data-reveal style="--d: 0.2s">
+      <img src="/img/screens/timeline-dark.webp" srcset="/img/screens/timeline-dark-1x.webp 1440w, /img/screens/timeline-dark.webp 2880w" sizes="(max-width: 1320px) calc(100vw - 32px), 1240px" width="2880" height="1800" alt="Photostead’s timeline in dark mode: a family’s July 2025 by day in a justified grid, with the sections on the left and a date scrubber on the right." fetchpriority="high" />
+    </figure>
+  </section>
+
+  <section class="sec tight" aria-label="Photostead at a glance">
+    <div class="wrap facts" data-reveal>
+      <div><b>100,000+</b><span>items in one library, and the timeline stays smooth</span></div>
+      <div><b>0 bytes</b><span>sent to us. Your photos stay on your own server</span></div>
+      <div><b>Byte for byte</b><span>originals are never changed, whatever you do in Photostead</span></div>
+      <div><b>Every face</b><span>recognized at home, on your hardware</span></div>
+    </div>
+  </section>
+
+  <!-- 01 The library -->
+  <section id="library" class="sec" aria-labelledby="lib-title">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow" data-reveal>01 — <b>The library</b></p>
+        <h2 id="lib-title" class="h2" data-reveal>Every moment, in the order it happened.</h2>
+        <p class="lede" data-reveal>
+          A justified grid keeps each photo’s true shape. Glide through years with the scrubber, zoom the grid with a pinch, and open anything
+          in an instant, full screen, in light or dark.
+        </p>
+        <ul class="points" data-reveal>
+          <li>{{icon:layers}}<span><b>Look-alikes, stacked</b>Bursts, RAW+JPEG pairs and near-duplicates fold into one, best shot on top.</span></li>
+          <li>{{icon:album}}<span><b>Albums, inside albums</b>Plus smart albums that fill themselves, and the real folders on your disks.</span></li>
+          <li>{{icon:clock}}<span><b>Dates you can trust</b>Each photo keeps the local time where it was taken, wherever you are now.</span></li>
+          <li>{{icon:pencil}}<span><b>Edits beside the original</b>Crop, turn, mirror, light and color. The original stays as it was, and undoing an edit brings it back.</span></li>
+          <li>{{icon:film}}<span><b>Videos that play anywhere</b>Phone HEVC, AV1, MKV and HDR clips get a copy every browser plays. Trim a clip, or keep a single frame as a photo.</span></li>
+        </ul>
+      </div>
+      <div class="media" data-reveal style="--d: 0.1s">
+        <figure class="window light"><img src="/img/screens/album-light.webp" srcset="/img/screens/album-light-1x.webp 1200w, /img/screens/album-light.webp 2400w" sizes="(max-width: 900px) calc(100vw - 32px), 700px" width="2400" height="1600" loading="lazy" alt="An album of a family trip to Lisbon in Photostead, light mode." /></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Search and Ask -->
+  <section id="search" class="sec" aria-labelledby="search-title">
+    <div class="wrap center">
+      <p class="eyebrow" data-reveal>02 — <b>Search &amp; Ask</b></p>
+      <h2 id="search-title" class="h2" data-reveal>Describe it. <em class="s">There</em> it is.</h2>
+      <p class="lede" data-reveal>
+        Search by what’s in the picture, by words written in it, or by the prompt that made it. Or just ask a question.
+        It all runs on your server, so nothing leaves the house to answer it. Places works the same way: each town is named offline,
+        and your photos land on a map.
+      </p>
+      <div class="search" data-search data-reveal>
+        <div class="s-bar" role="presentation">
+          {{icon:search}}
+          <span class="s-text" data-s-text></span>
+          <span class="s-mode" data-s-mode>{{icon:spark}} Ask</span>
+        </div>
+        <div class="s-chips" role="group" aria-label="Try a search">{{searchChips}}</div>
+        <p class="s-answer" data-s-answer></p>
+        <div class="s-grid" data-s-grid></div>
+        <p class="sr" role="status" data-s-status></p>
+      </div>
+      <p class="hero-note">The results above are from the demo library, found the way the demo finds them</p>
+    </div>
+    <script type="application/json" id="search-data">{{searchData}}</script>
+  </section>
+
+  <!-- 03 People and memories -->
+  <section id="people" class="sec paper" aria-labelledby="people-title">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>03 — <b>People, pets &amp; memories</b></p>
+      <h2 id="people-title" class="h2" data-reveal>Name a face once.<br />Every photo follows.</h2>
+      <p class="lede" data-reveal>
+        Face recognition runs on your own hardware, keeps lookalikes apart instead of lumping them together, and recognizes the dog too.
+        Every morning, Photostead brings back a day from years ago.
+      </p>
+      <div class="faces" data-reveal>{{faces}}</div>
+      <div class="mems" data-reveal>{{memories}}</div>
+    </div>
+  </section>
+
+  <!-- 04 Made with AI -->
+  <section id="ai" class="sec" aria-labelledby="ai-title">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow" data-reveal>04 — <b>Made with AI</b></p>
+          <h2 id="ai-title" class="h2" data-reveal>The prompt stays with the picture.</h2>
+        </div>
+        <p class="lede" data-reveal>
+          Photostead reads how an image was made, from ComfyUI, Automatic1111, Forge, Midjourney, Content Credentials and more: prompt, model,
+          LoRAs, seed and settings, one click to copy. A prompt library and a model catalog grow on their own, and the characters you invent get
+          their own space, apart from your family.
+        </p>
+      </div>
+      <div class="gen" data-reveal>
+        <figure class="gen-pic" style="{{ph:d02}}"><img src="{{p:d02}}" loading="lazy" alt="Nova, an explorer in an orange flight suit, beside a rover on red Martian dunes at dusk. An AI-generated image from the demo library." /></figure>
+        <div class="gen-card">
+          <div class="gen-head">
+            <span class="gen-tag">{{icon:spark}} AI-generated</span>
+            <button type="button" class="gen-copy" data-copy="#gen-prompt">{{icon:copy}} <span>Copy prompt</span></button>
+            <span class="sr" role="status"></span>
+          </div>
+          <p class="gen-prompt" id="gen-prompt">{{prompt:d02}}</p>
+          <dl class="gen-kv">
+            <dt>Model</dt><dd>Nano Banana 2</dd>
+            <dt>Character</dt><dd>Nova · 6 images</dd>
+            <dt>Size</dt><dd>{{size:d02}}</dd>
+          </dl>
+          <p class="gen-note">A picture from the demo library, shown with the prompt it was made from, as Photostead shows it.</p>
+        </div>
+      </div>
+      <div class="gen-strip" data-reveal>{{aiStrip}}</div>
+    </div>
+  </section>
+
+  <!-- 05 The household -->
+  <section id="household" class="sec paper" aria-labelledby="house-title">
+    <div class="wrap split flip">
+      <div>
+        <p class="eyebrow" data-reveal>05 — <b>The household</b></p>
+        <h2 id="house-title" class="h2" data-reveal>Everyone’s photos. One home.</h2>
+        <p class="lede" data-reveal>
+          Each person keeps a private library, and a shared space gathers what you choose: by hand, or automatically, by who’s in the photo.
+          Share an album with a link or a personal invitation, with no sign-up for the people you send it to.
+        </p>
+        <ul class="points" data-reveal>
+          <li>{{icon:household}}<span><b>Auto-share rules</b>“Photos with the kids, from this day on” goes to the household by itself.</span></li>
+          <li>{{icon:lock}}<span><b>A vault behind a PIN</b>Kept out of the timeline, search, memories and sharing.</span></li>
+          <li>{{icon:share}}<span><b>Links that behave</b>Passwords, expiry dates, a QR code or a printed card, and location stripped from shared copies.</span></li>
+          <li>{{icon:quote}}<span><b>Albums people talk about</b>Comments, recent activity, and picks, so family or a client can choose their favorites.</span></li>
+          <li>{{icon:eyeOff}}<span><b>Adult content, each person’s call</b>A local model spots nudity in photos and videos. Everyone chooses to show it, blur it or hide it.</span></li>
+        </ul>
+      </div>
+      <div class="media" data-reveal style="--d: 0.1s">
+        <div class="whose" aria-label="Whose photos the timeline shows"><span>Everything</span><span>Mine</span><span aria-current="true">Home</span></div>
+        <div class="house">{{house}}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Bringing it in -->
+  <section id="bring" class="sec" aria-labelledby="bring-title">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>06 — <b>Bringing it in</b></p>
+      <h2 id="bring-title" class="h2" data-reveal>Every way in.<br />One library.</h2>
+      <p class="lede" data-reveal>
+        Bring years of photos in from wherever they are now, with the dates, albums and prompts that came with them. Photostead keeps one copy
+        of each file, so bringing something in twice does no harm.
+      </p>
+      <div class="cards">
+        <article class="card" data-reveal>{{icon:upload}}<h3>From your browser</h3><p>Drag files or whole folders onto the page. Uploads are filed by the day they were taken, in folders you can read without Photostead.</p></article>
+        <article class="card" data-reveal style="--d: 0.06s">{{icon:importIn}}<h3>From Google and Apple</h3><p>Drop in a Google Takeout or an Apple Photos export. Dates, descriptions and places come along, and Google’s albums and favorites too.</p></article>
+        <article class="card" data-reveal style="--d: 0.12s">{{icon:phone}}<h3>From your iPhone</h3><p>Photostead for iPhone backs up your camera roll in the background, iCloud originals included.</p></article>
+        <article class="card" data-reveal>{{icon:screen}}<h3>From the web</h3><p>Photostead Capture, a browser extension, saves posts from X, CivitAI, Instagram, TikTok and Pinterest with their text, prompts and a link back.</p></article>
+        <article class="card" data-reveal style="--d: 0.06s">{{icon:wand}}<h3>From ComfyUI</h3><p>A small sync files every finished image and video as it’s made, with the workflow that made it.</p></article>
+        <article class="card" data-reveal style="--d: 0.12s">{{icon:spark}}<h3>From your AI assistant</h3><p>Claude Code, Codex and other MCP clients can search, organize and add to your library as you, on your own subscription. They never see the vault.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photostead for iPhone -->
+  <section id="iphone" class="sec" aria-labelledby="iphone-title">
+    <div class="wrap center">
+      <p class="eyebrow plain" data-reveal>Photostead for iPhone</p>
+      <h2 id="iphone-title" class="h2" data-reveal>Your camera roll,<br />home by morning.</h2>
+      <p class="lede" data-reveal>
+        Originals back up in the background, newest first, and only what your server doesn’t have yet. At home the app goes straight to your
+        server; away, once remote access is on, it gets in through your server’s own secure address with nothing else to install. Then browse and search everything with the gestures you already know, share an album or
+        add to it from the phone, and save anything at full size to Photos or Files.
+      </p>
+      {{iphone}}
+      <div class="actions">
+        {{appStore:Coming soon to the App Store}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section id="privacy" class="sec paper" aria-labelledby="privacy-title">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Privacy</p>
+      <h2 id="privacy-title" class="h2" data-reveal>Private by design,<br />not by promise.</h2>
+      <p class="lede" data-reveal>We never see your library, because it never comes to us. There’s no Photostead cloud to sign up for, to trust, or to leak, and the code is open for anyone to check.</p>
+      <div class="cards">
+        <article class="card" data-reveal>{{icon:database}}<h3>Your server, your disks</h3><p>Photos, faces, search and everything else live on hardware you own, in folders you can read without us.</p></article>
+        <article class="card" data-reveal style="--d: 0.06s">{{icon:spark}}<h3>AI that works at home</h3><p>Search by meaning, faces, text in pictures and place names all work locally. A GPU helps; it isn’t required.</p></article>
+        <article class="card" data-reveal style="--d: 0.12s">{{icon:shield}}<h3>No cloud in the loop</h3><p>Search, Ask and face recognition are answered by your own server. Nothing about your library goes to an AI service unless you connect your own assistant.</p></article>
+        <article class="card" data-reveal>{{icon:eyeOff}}<h3>No ads. No tracking.</h3><p>The app and this site carry no analytics, advertising or tracking code. There is no account with us to make.</p></article>
+        <article class="card" data-reveal style="--d: 0.06s">{{icon:lock}}<h3>A vault for the private ones</h3><p>Behind a PIN, and kept out of the timeline, search, memories and sharing until you open it.</p></article>
+        <article class="card" data-reveal style="--d: 0.12s">{{icon:image}}<h3>Originals untouched</h3><p>Files stay byte for byte as they arrived. Stars, keywords, descriptions, names and edits go in XMP sidecars that Lightroom, digiKam and darktable read.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it runs -->
+  <section id="server" class="sec" aria-labelledby="server-title">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Runs on what you have</p>
+      <h2 id="server-title" class="h2" data-reveal>One server.<br />Your hardware.</h2>
+      <p class="lede" data-reveal>
+        Photostead runs as a single container on a home server or NAS, or as an app on a Mac or Windows PC, with its database built in. On a
+        server, point it at the folders you already have: it indexes them in place, read-only if you like, and watches them for new files.
+      </p>
+      <nav class="get" aria-label="Install Photostead" data-reveal>
+        <a href="/install/#unraid"><b>Unraid</b><span>One container, with your originals on the array under parity</span></a>
+        <a href="/install/#docker"><b>Docker</b><span>One Compose file for Synology, TrueNAS, Portainer or any Linux box</span></a>
+        <a href="/install/#mac"><b>Mac</b><span>An app in the menu bar, on Apple silicon</span></a>
+        <a href="/install/#windows"><b>Windows</b><span>An app in the tray, on 64-bit Windows</span></a>
+      </nav>
+      <p class="get-note" data-reveal>Free and open source, under the GNU AGPL. <a href="https://github.com/atomtanstudio/photostead">The code is on GitHub.</a></p>
+      <div class="rig" data-reveal>
+        <div class="node"><h3>{{icon:phone}} Your devices</h3><ul><li>Photostead for iPhone</li><li>Any web browser</li><li>Links for family and friends</li><li>Your AI assistant, over MCP</li></ul></div>
+        <span class="wire" aria-hidden="true"></span>
+        <div class="node main"><h3>{{icon:mark}} Photostead server</h3><ul><li>Unraid, Docker, Mac or Windows</li><li>Postgres included, backed up nightly</li><li>Every original checked against its hash</li><li>Search, faces and text, on the CPU</li><li>At home, or anywhere with Tailscale</li></ul></div>
+        <span class="wire" aria-hidden="true"></span>
+        <div class="node"><h3>{{icon:spark}} Optional GPU worker</h3><ul><li>A gaming PC that lends its GPU</li><li>Faster indexing of search, faces and text</li><li>Video copies made with NVENC</li><li>Start it when you like, stop it anytime</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="end" aria-labelledby="end-title">
+    <div class="end-bg" aria-hidden="true" style="{{ph:b14#2}}"><img src="{{p:b14#2}}" alt="" loading="lazy" /></div>
+    <div class="wrap">
+      <h2 id="end-title" class="display" data-reveal>See it with<br />a <em class="s">real</em> library.</h2>
+      <p class="lede" data-reveal>The demo is the real Photostead, running in your browser on a sample household: three years of trips, birthdays and everyday moments.</p>
+      <div class="actions" data-reveal>
+        <a class="btn" href="/demo/">Open the live demo {{icon:arrow}}</a>
+        <a class="btn btn-ghost" href="/install/">Get Photostead</a>
+        {{appStore:Coming soon for iPhone}}
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- include:footer -->
+<script src="/assets/site.js?v={{version}}" defer></script>
+</body>
+</html>

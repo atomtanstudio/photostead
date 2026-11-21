@@ -1,0 +1,114 @@
+# The iPhone app. Generate the Xcode project with: xcodegen (in this folder).
+name: Photostead
+options:
+  bundleIdPrefix: studio.atomtan
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+configFiles:
+  Debug: Config/Base.xcconfig
+  Release: Config/Base.xcconfig
+targets:
+  Photostead:
+    type: application
+    platform: iOS
+    sources: [Photostead]
+    info:
+      path: Photostead/Info.plist
+      properties:
+        CFBundleDisplayName: Photostead
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen:
+          UIImageName: LaunchMark # the house mark, centred, on the system background (light and dark)
+        ITSAppUsesNonExemptEncryption: false # HTTPS through Apple's frameworks only: exempt, no documents
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        NSPhotoLibraryUsageDescription: Photostead backs up your photos and videos to your own Photostead server, newest first, and only what it doesn't have yet.
+        NSPhotoLibraryAddUsageDescription: To save photos and videos from Photostead into your Photos library.
+        NSCameraUsageDescription: To scan the pairing code Photostead shows on your computer.
+        NSFaceIDUsageDescription: To open the vault without typing its PIN.
+        NSLocalNetworkUsageDescription: To reach your Photostead server on your home network.
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+        CFBundleURLTypes:
+          - CFBundleURLName: studio.atomtan.photostead.pair
+            CFBundleURLSchemes: [photostead]
+        UIBackgroundModes: [fetch, processing]
+        BGTaskSchedulerPermittedIdentifiers: [studio.atomtan.photostead.backup, studio.atomtan.photostead.refresh]
+    entitlements:
+      path: Photostead/Photostead.entitlements
+      properties:
+        keychain-access-groups: [$(AppIdentifierPrefix)studio.atomtan.photostead.shared] # the pairing, shared with the upload extension
+    dependencies:
+      - target: PhotosteadUploads
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: studio.atomtan.photostead
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_PREVIEWS: YES
+  PhotosteadUploads: # iOS's background uploads (iOS 27 and later)
+    type: extensionkit-extension
+    platform: iOS
+    deploymentTarget: "27.0"
+    sources:
+      - Uploads
+      - Photostead/Connection.swift
+      - Photostead/Items.swift
+    info:
+      path: Uploads/Info.plist
+      properties:
+        CFBundleDisplayName: Photostead uploads
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        EXAppExtensionAttributes:
+          EXExtensionPointIdentifier: com.apple.photos.background-upload
+        BackgroundUploadURLBase: $(PHOTOSTEAD_UPLOAD_URL_BASE)
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    entitlements:
+      path: Uploads/Uploads.entitlements
+      properties:
+        keychain-access-groups: [$(AppIdentifierPrefix)studio.atomtan.photostead.shared]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: studio.atomtan.photostead.uploads
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1"
+  PhotosteadUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [PhotosteadUITests]
+    dependencies:
+      - target: Photostead
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: studio.atomtan.photostead.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Photostead
+  PhotosteadTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [PhotosteadTests]
+    dependencies:
+      - target: Photostead
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: studio.atomtan.photostead.tests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  Photostead:
+    build:
+      targets:
+        Photostead: all
+        PhotosteadTests: [test]
+        PhotosteadUITests: [test]
+    test:
+      targets: [PhotosteadTests, PhotosteadUITests]

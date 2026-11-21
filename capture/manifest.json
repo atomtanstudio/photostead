@@ -1,0 +1,186 @@
+{
+  "manifest_version": 3,
+  "name": "Photostead Capture",
+  "version": "1.2.2",
+  "description": "Save a post’s images and videos from X, CivitAI, Instagram, TikTok and Pinterest to Photostead, with the post’s text and link.",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "https://*.twimg.com/*",
+    "https://civitai.com/*",
+    "https://*.civitai.com/*",
+    "https://civitai.red/*",
+    "https://*.civitai.red/*",
+    "https://civitai.green/*",
+    "https://*.civitai.green/*",
+    "https://www.instagram.com/*",
+    "https://www.tiktok.com/*",
+    "https://*.pinterest.com/*",
+    "https://*.pinterest.ca/*",
+    "https://*.pinterest.co.uk/*",
+    "https://*.pinterest.com.au/*",
+    "https://*.pinterest.de/*",
+    "https://*.pinterest.fr/*",
+    "https://*.pinterest.es/*",
+    "https://*.pinterest.it/*",
+    "https://*.pinterest.jp/*",
+    "https://*.pinterest.com.mx/*",
+    "https://*.pinterest.nz/*",
+    "https://*.pinterest.ie/*",
+    "https://*.cdninstagram.com/*",
+    "https://*.fbcdn.net/*",
+    "https://*.tiktok.com/*",
+    "https://*.tiktokcdn.com/*",
+    "https://*.tiktokcdn-us.com/*",
+    "https://*.tiktokv.com/*",
+    "https://*.tiktokv.us/*",
+    "https://*.ibyteimg.com/*",
+    "https://*.pinimg.com/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "content/bridge.js"
+      ],
+      "css": [
+        "content/tweet-ui.css"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "content/tweet-ui.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "content/forensic-bundle-ingest.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://civitai.com/*",
+        "https://civitai.red/*",
+        "https://civitai.green/*"
+      ],
+      "js": [
+        "content/sites/common.js",
+        "content/sites/civitai.js"
+      ],
+      "css": [
+        "content/tweet-ui.css",
+        "content/sites/sites.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.instagram.com/*"
+      ],
+      "js": [
+        "content/sites/common.js",
+        "content/sites/instagram.js"
+      ],
+      "css": [
+        "content/tweet-ui.css",
+        "content/sites/sites.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.tiktok.com/*"
+      ],
+      "js": [
+        "content/sites/common.js",
+        "content/sites/tiktok.js"
+      ],
+      "css": [
+        "content/tweet-ui.css",
+        "content/sites/sites.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://*.pinterest.com/*",
+        "https://*.pinterest.ca/*",
+        "https://*.pinterest.co.uk/*",
+        "https://*.pinterest.com.au/*",
+        "https://*.pinterest.de/*",
+        "https://*.pinterest.fr/*",
+        "https://*.pinterest.es/*",
+        "https://*.pinterest.it/*",
+        "https://*.pinterest.jp/*",
+        "https://*.pinterest.com.mx/*",
+        "https://*.pinterest.nz/*",
+        "https://*.pinterest.ie/*"
+      ],
+      "js": [
+        "content/sites/common.js",
+        "content/sites/pinterest.js"
+      ],
+      "css": [
+        "content/tweet-ui.css",
+        "content/sites/sites.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Photostead Capture",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content/inject.js",
+        "content/page-actions.js",
+        "content/forensic-capture.js"
+      ],
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ]
+    }
+  ],
+  "commands": {},
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}

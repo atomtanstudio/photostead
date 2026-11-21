@@ -1,0 +1,71 @@
+# The desktop app for Windows: builds it (desktop/windows/build.sh) on a Windows runner and runs it
+# end to end without its icon (desktop/test/smoke.sh): the first account, a JPEG, a HEIC and a video
+# with thumbnails, a database copy, the AI worker's packages, stopping and starting again. The Mac
+# app is built and tested on a Mac (desktop/mac/build.sh). The zip is kept as an artifact.
+name: Desktop
+
+on:
+  push:
+    branches: [desktop-apps]
+    tags: ["v*"]
+    paths:
+      - desktop/**
+      - server/**
+      - worker/**
+      - web/**
+      - .github/workflows/desktop.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-2025
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: server/go.mod
+          cache-dependency-path: |
+            server/go.sum
+            desktop/go.sum
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: uv
+        shell: pwsh
+        run: python -m pip install --quiet uv
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          path-type: inherit
+          install: >-
+            mingw-w64-ucrt-x86_64-gcc
+            mingw-w64-ucrt-x86_64-pkgconf
+            mingw-w64-ucrt-x86_64-libvips
+            mingw-w64-ucrt-x86_64-libheif
+            mingw-w64-ucrt-x86_64-postgresql
+            mingw-w64-ucrt-x86_64-ntldd
+            make
+            unzip
+            zip
+      - name: Build
+        shell: msys2 {0}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash desktop/windows/build.sh
+      - name: End to end
+        shell: bash
+        env:
+          SMOKE_AI: "1" # the worker downloads its models and looks at the pictures, on Windows
+        run: bash desktop/test/smoke.sh desktop/build/windows/Photostead/Photostead.exe desktop/build/windows/Photostead/runtime 4870
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Photostead-windows
+          path: desktop/build/windows/Photostead-windows.zip
+          if-no-files-found: ignore
+          retention-days: 14

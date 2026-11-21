@@ -1,0 +1,108 @@
+# Publishes photostead.com (site/) to Cloudflare Workers.
+#
+# - Every push to main that changes the site or the web app publishes a preview at
+#   photostead-site-preview.<your workers.dev subdomain>.workers.dev. (Run it by hand, target
+#   preview, to see another branch there.)
+# - photostead.com itself changes only when this is run by hand (Actions → Website → Run workflow,
+#   target: photostead.com).
+#
+# Needs two repository secrets (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN   a token from the "Edit Cloudflare Workers" template, for photostead.com
+#   CLOUDFLARE_ACCOUNT_ID  the account's ID (Workers & Pages → Overview)
+# Without them the job says so and stops, without failing.
+name: Website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'web/**'
+      - '.github/workflows/site.yml'
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Where to publish
+        type: choice
+        options: [preview, photostead.com]
+        default: preview
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-${{ github.event.inputs.target || 'preview' }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Check for the Cloudflare secrets
+        id: secrets
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::notice::Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID as repository secrets to publish the website."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.secrets.outputs.ok == 'true'
+      - uses: actions/setup-node@v4
+        if: steps.secrets.outputs.ok == 'true'
+        with:
+          node-version: 22
+      - name: Install
+        if: steps.secrets.outputs.ok == 'true'
+        run: |
+          npm ci --prefix web --no-audit --no-fund
+          npm ci --prefix site --no-audit --no-fund
+      - name: Build
+        if: steps.secrets.outputs.ok == 'true'
+        working-directory: site
+        run: node build.mjs
+      - name: Publish
+        if: steps.secrets.outputs.ok == 'true'
+        working-directory: site
+        run: |
+          if [ "${{ github.event.inputs.target }}" = "photostead.com" ]; then
+            npx wrangler deploy | tee deploy.log
+            npx wrangler deploy --config www/wrangler.jsonc # www.photostead.com → photostead.com
+            echo "https://photostead.com" > url
+            echo "Published to https://photostead.com" >> "$GITHUB_STEP_SUMMARY"
+          else
+            # the preview is a copy: keep it out of search engines
+            printf '\n/*\n  X-Robots-Tag: noindex\n' >> dist/_headers
+            npx wrangler deploy --env preview | tee deploy.log
+            grep -o 'https://[a-z0-9.-]*\.workers\.dev' deploy.log | head -1 > url
+            echo "Preview: $(cat url)" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Check the pages answer
+        if: steps.secrets.outputs.ok == 'true'
+        working-directory: site
+        run: |
+          base=$(cat url)
+          for p in / /install/ /support/ /privacy/ /terms/ /demo/ /demo/library.json; do
+            for try in 1 2 3 4 5 6; do
+              code=$(curl -s -o /dev/null -w '%{http_code}' "$base$p" || true)
+              [ "$code" = 200 ] && break
+              sleep 10
+            done
+            echo "$code $base$p"
+            [ "$code" = 200 ] || { echo "::error::$base$p answered $code"; exit 1; }
+          done
+          # www forwards to the same page (its certificate can take a few minutes the first time)
+          if [ "$base" = https://photostead.com ]; then
+            for try in $(seq 1 18); do
+              got=$(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' https://www.photostead.com/support/?a=1 || true)
+              [ "$got" = "301 https://photostead.com/support/?a=1" ] && break
+              sleep 10
+            done
+            echo "www: $got"
+            [ "$got" = "301 https://photostead.com/support/?a=1" ] || echo "::warning::www.photostead.com doesn't redirect yet: $got"
+          fi

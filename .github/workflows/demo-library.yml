@@ -1,0 +1,44 @@
+# Builds the website's demo library (site/demo-library) on GitHub's machines, which can download the
+# pictures from Mitte, and commits what it makes: site/public/demo (the sizes the demo serves and
+# library.json) and site/demo-library/refs (the reference portraits the face crops come from).
+# Runs when the library's sources change; it makes only what's missing, so a run with nothing new
+# commits nothing.
+name: Demo library
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'site/demo-library/**'
+      - '.github/workflows/demo-library.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: demo-library-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install sharp and thumbhash
+        working-directory: site
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Build the library
+        working-directory: site
+        run: node demo-library/build.mjs
+      - name: Commit what it made
+        run: |
+          git add site/public/demo site/demo-library/refs
+          if git diff --cached --quiet; then echo "Nothing new to commit"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Demo library: the pictures, in the sizes the demo serves"
+          git push

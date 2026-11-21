@@ -1,0 +1,145 @@
+<!-- {"title": "Install · Photostead", "description": "Set up the Photostead server on Unraid, with Docker, or as an app on a Mac or Windows PC, then pair Photostead for iPhone.", "path": "/install/"} -->
+<!doctype html>
+<html lang="en">
+<head>
+<!-- include:head -->
+</head>
+<body>
+<!-- include:header -->
+<main id="main" class="doc">
+  <p class="eyebrow">Install</p>
+  <h1>Set up Photostead</h1>
+  <p class="intro">
+    One person in the household sets up the Photostead server, once. Everyone else just opens it in a browser or pairs their iPhone. Pick
+    where your server will run.
+  </p>
+
+  <nav class="toc" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#unraid">Unraid</a></li>
+      <li><a href="#docker">Docker, on a NAS or Linux box</a></li>
+      <li><a href="#mac">Mac</a></li>
+      <li><a href="#windows">Windows</a></li>
+      <li><a href="#next">Once it’s running</a></li>
+      <li><a href="#away">Away from home</a></li>
+      <li><a href="#source">Source code</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="needs">What it needs</h2>
+  <ul>
+    <li><b>A computer that stays on:</b> a NAS, a home server or mini PC, a Raspberry Pi 5, or a Mac or Windows PC. No GPU is needed.</li>
+    <li><b>4 GB of memory</b>, 8 GB for a big library.</li>
+    <li><b>Room for thumbnails and the database:</b> about 0.65 GB for every 1,000 photos and videos, on fast storage if you have it. Your originals stay where they are.</li>
+  </ul>
+
+  <h2 id="unraid">Unraid</h2>
+  <ol>
+    <li>
+      <b>Make a share named <code>photostead</code></b> under <b>Shares</b>: Primary storage the cache, Secondary storage the array, Mover
+      action cache → array. Your originals live here, protected by parity.
+    </li>
+    <li>
+      <b>Install Photostead</b> from the <b>Apps</b> tab: search for Photostead and choose Install. If it isn’t listed yet, open Unraid’s
+      terminal (the <b>&gt;_</b> button at the top right), run this, then choose <b>Docker</b> → <b>Add Container</b> → <b>Template</b> →
+      <b>Photostead</b>:
+      <pre><code>wget -O /boot/config/plugins/dockerMan/templates-user/my-Photostead.xml https://raw.githubusercontent.com/atomtanstudio/photostead/main/deploy/unraid/ca/photostead.xml</code></pre>
+    </li>
+    <li>
+      <b>Point it at photos you already have</b> (optional): map each folder read-only to <code>/libraries/&lt;name&gt;</code>, for example
+      <code>/mnt/user/pictures</code> → <code>/libraries/pictures</code>. Photostead indexes them in place and never writes to them.
+    </li>
+    <li>Choose <b>Apply</b>, then open the WebUI (port 4800).</li>
+  </ol>
+
+  <h2 id="docker">Docker, on a NAS or Linux box</h2>
+  <p>
+    <a href="https://raw.githubusercontent.com/atomtanstudio/photostead/main/deploy/compose/compose.yaml">compose.yaml</a> is everything in
+    one file. Change the folders on the left of each volume, and set <code>PUID</code> and <code>PGID</code> to the user who owns them. Then:
+  </p>
+  <ul>
+    <li><b>Synology:</b> Container Manager → <b>Project</b> → <b>Create</b>, and paste it in.</li>
+    <li><b>Portainer:</b> <b>Stacks</b> → <b>Add stack</b>.</li>
+    <li><b>TrueNAS or CasaOS:</b> add it as a custom app.</li>
+    <li><b>Anywhere else:</b> <code>docker compose up -d</code> in its folder.</li>
+  </ul>
+  <p>Then open port 4800 on that machine in your browser. Or with Docker alone:</p>
+  <pre><code>docker run -d --name photostead -p 4800:4800 --shm-size=1g --stop-timeout 60 \
+  -v /srv/photostead-data:/data \
+  -v /srv/photos/photostead:/photos \
+  -v /srv/photos/existing:/libraries/existing:ro \
+  ghcr.io/atomtanstudio/photostead:latest</code></pre>
+  <p>
+    <code>/data</code> holds the database, thumbnails and previews. <code>/photos</code> is where uploads and phone backups are filed, a
+    folder for each person. Folders under <code>/libraries/</code> are indexed in place, read-only. Images are built for 64-bit x86 and ARM.
+  </p>
+
+  <h2 id="mac">Mac</h2>
+  <p>For a Mac with Apple silicon (M1 or later) and macOS 14 Sonoma or later.</p>
+  <ol>
+    <li><a href="https://github.com/atomtanstudio/photostead/releases/latest/download/Photostead.dmg">Download Photostead for Mac</a>.</li>
+    <li>Open it and drag <b>Photostead</b> to <b>Applications</b>.</li>
+    <li>Open Photostead from Applications. Its house icon appears in the menu bar at the top of the screen.</li>
+    <li>Choose <b>Open Photostead</b> from that icon to open it in your browser.</li>
+  </ol>
+  <p>
+    Uploads and phone backups go to <b>Pictures › Photostead Library</b> (<b>Choose Another Folder…</b> in the menu changes it). Turn on
+    <b>Open at Login</b> and <b>Keep This Computer Awake</b> so phones can back up overnight.
+  </p>
+
+  <h2 id="windows">Windows</h2>
+  <p>For 64-bit Windows 10 or 11.</p>
+  <ol>
+    <li><a href="https://github.com/atomtanstudio/photostead/releases/latest/download/Photostead-windows.zip">Download Photostead for Windows</a>.</li>
+    <li>Right-click the download, choose <b>Extract All</b>, and put the <b>Photostead</b> folder somewhere it can stay, such as your user folder.</li>
+    <li>Open the folder and double-click <b>Photostead</b>.</li>
+    <li>
+      If Windows says it protected your PC, choose <b>More info</b> → <b>Run anyway</b>. If it asks whether Photostead may use your network,
+      allow private networks, so your phone can reach it at home.
+    </li>
+    <li>Photostead’s icon appears in the tray by the clock (under the <b>^</b> if it’s hidden). Choose <b>Open Photostead</b> from it.</li>
+  </ol>
+  <p>
+    Uploads and phone backups go to <b>Pictures\Photostead Library</b>. Turn on <b>Open at Login</b> and <b>Keep This Computer Awake</b> in
+    the tray menu so phones can back up overnight.
+  </p>
+
+  <h2 id="next">Once it’s running</h2>
+  <ol>
+    <li><b>Create the first account.</b> It’s the admin.</li>
+    <li>
+      <b>Follow the Get started checklist</b> at the top of the timeline: bringing photos in, backing up a phone, reaching Photostead away
+      from home, inviting the household and keeping a second copy. Each step ticks itself off once it’s done.
+    </li>
+    <li>
+      <b>Pair your iPhone:</b> install Photostead for iPhone, then open <b>Devices &amp; remote access</b> → <b>Show a pairing code</b> (on a
+      Mac or PC, <b>Pair a Phone…</b> in the menu) and point the iPhone’s Camera at the QR code. <a href="/support/#start">More on pairing</a>.
+    </li>
+  </ol>
+  <p>The first time it starts, Photostead downloads its AI models (about 2.4 GB). Search by meaning and faces start working once they’re in.</p>
+
+  <h2 id="away">Away from home</h2>
+  <p>
+    In <b>Devices &amp; remote access</b>, choose <b>Tailscale</b>: Photostead joins your tailnet with a secure address of its own. Turn on
+    <b>Funnel</b> there and share links work for anyone, and paired iPhones work from anywhere with nothing else to install, so only the
+    person who sets Photostead up needs Tailscale. Behind your own reverse proxy or Cloudflare Tunnel instead, see the
+    <a href="https://github.com/atomtanstudio/photostead/blob/main/docs/guide.md">guide</a>.
+  </p>
+
+  <h2 id="source">Source code</h2>
+  <p>
+    Photostead is free and open source, under the GNU Affero General Public License v3. The code, the full guide, releases and issues are on
+    <a href="https://github.com/atomtanstudio/photostead">GitHub</a>. A gaming PC can lend its GPU for faster indexing: see the optional GPU
+    worker there.
+  </p>
+
+  <div class="contact">
+    <p><b>Stuck?</b>A person reads every email.</p>
+    <a class="btn" href="mailto:hello@photostead.com?subject=Photostead%20setup">Email us</a>
+  </div>
+</main>
+<!-- include:footer -->
+<script src="/assets/site.js?v={{version}}" defer></script>
+</body>
+</html>

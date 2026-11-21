@@ -1,0 +1,2755 @@
+{
+ "about": "Every picture in Photostead's demo library: generated on Mitte for the demo, with the exact prompt each was made from. build.mjs downloads them and makes the demo's files.",
+ "people": {
+  "Maya": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/aea6f9af-8d3c-4b09-9bf8-754f821dc1de.jpg",
+  "Sam": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/e38dc591-6f12-4334-9a89-e01e1bedd538.jpg",
+  "Leo": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/1b5c06d7-793f-4cf7-9bb9-13fd647967a4.jpg",
+  "June": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/0856f283-3427-4c16-8ca1-4da196b45d25.jpg",
+  "Rosa": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/0e93eb2e-9e33-4766-9345-4e522176bb90.jpg",
+  "Pepper": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/44b8c5ba-a152-40e0-8f74-96aa3577163d.jpg",
+  "Miso": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/a3d63ee0-c57b-416f-b4df-4bd35136a011.jpg"
+ },
+ "shots": [
+  {
+   "id": "a01",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "The first snow on a quiet street of craftsman houses in Portland at dawn, porch lights still on, untouched snow on parked cars, soft blue light. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "The first snow on a quiet street of craftsman houses in Portland at dawn, porch lights still on, untouched snow on parked cars, soft blue light.",
+   "date": "2024-01-20T08:05",
+   "place": "Portland, Oregon",
+   "style": "land",
+   "cam": "x100",
+   "album": "Home",
+   "kw": [
+    "snow",
+    "winter",
+    "street"
+   ],
+   "node": "nano-banana-2",
+   "run": "BBrNVIW5JXW",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/572f1c6e-986d-42fa-91b0-c4ec087c10ce.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/jxs3ZPuQ3_3Gu_9xyln5G_2tcEq0U8.jpg",
+     "asset": "NV4nXtB4zbY"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/72dc82d9-06fd-4e7a-a99f-7cf4a3ddcff4.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/7iDRSoDHER-skkOU6_S4Y_qgVixS76.jpg",
+     "asset": "YVvg9UeNbg6"
+    }
+   ]
+  },
+  {
+   "id": "a02",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [],
+   "prompt": "A stack of buttermilk pancakes with blueberries and dripping maple syrup on a speckled handmade ceramic plate, a mug of coffee beside it on a wooden kitchen table on a Sunday morning. Food photograph taken on a smartphone, natural window light, realistic textures, appetizing but unstyled. No text, no watermark, no border.",
+   "scene": "A stack of buttermilk pancakes with blueberries and dripping maple syrup on a speckled handmade ceramic plate, a mug of coffee beside it on a wooden kitchen table on a Sunday morning.",
+   "date": "2024-02-11T09:40",
+   "place": "Portland, Oregon",
+   "style": "food",
+   "cam": "phone",
+   "kw": [
+    "pancakes",
+    "breakfast"
+   ],
+   "node": "nano-banana-2",
+   "run": "aVm4gS58yn5",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4067d002-b5cc-4323-be26-4d297154968d.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/wkQjTh4kZIchjyxomfQhJ_XGuCY9ZU.jpg",
+     "asset": "rNOV6UeoZ_x"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/82f2d870-698a-4b85-a1e1-b70b39167f6a.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/h-ug3XFxhHojJZHs2EDnR_lzf343gZ.jpg",
+     "asset": "dxP1Zhzm0y5"
+    }
+   ]
+  },
+  {
+   "id": "a03",
+   "model": "nb2",
+   "n": 2,
+   "ar": "2:3",
+   "refs": [],
+   "prompt": "Multnomah Falls in spring, the long waterfall dropping through mossy basalt cliffs, the stone footbridge across it, mist and lush green ferns. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Multnomah Falls in spring, the long waterfall dropping through mossy basalt cliffs, the stone footbridge across it, mist and lush green ferns.",
+   "date": "2024-03-16T11:20",
+   "place": "Multnomah Falls, Oregon",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Columbia River Gorge",
+   "kw": [
+    "waterfall",
+    "spring"
+   ],
+   "node": "nano-banana-2",
+   "run": "yNd4Zc2bPR2",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/9ac2b25a-a4c2-4c6c-b809-266806a17b0c.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/GnoCoagNtKXPJnZ3nUG2w_FdGlSSpI.jpg",
+     "asset": "2A0pRfYqLoP"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4f582ee1-6450-4262-9a21-b7e867198d3a.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/ju90FK_3GDj_CUVJ1Dv5x_ymkesDxE.jpg",
+     "asset": "7D6kRHN4bgq"
+    }
+   ]
+  },
+  {
+   "id": "a04",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [
+    "Maya"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman)). Create a brand-new, natural photo (not a portrait against a grey wall): Maya at a pottery wheel shaping a wide bowl, wet clay on her hands and forearms, concentrating with a small smile, a sunlit ceramics studio with wooden shelves of glazed pots behind her. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Maya at a pottery wheel shaping a wide bowl, wet clay on her hands and forearms, concentrating with a small smile, a sunlit ceramics studio with wooden shelves of glazed pots behind her.",
+   "date": "2024-04-06T15:10",
+   "place": "Portland, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "kw": [
+    "pottery",
+    "ceramics",
+    "studio"
+   ],
+   "node": "nano-banana-2",
+   "run": "VDoNEf8b_N8",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/56bf385b-e55a-488f-8089-350bea2a8645.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/qQgUV3JDpA9e-eDCBcikO_w0DQFUlH.jpg",
+     "asset": "azPD8ToNa19"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/0e64a96d-a9ea-4230-b290-e81d6571dca2.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/_0hIlBbyNKxt1WL9KbMxu_YFA0X6fy.jpg",
+     "asset": "1AKd_tNJWO6"
+    }
+   ]
+  },
+  {
+   "id": "a05",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [],
+   "prompt": "A farmers market stall overflowing with strawberries in green cardboard baskets and bunches of peonies wrapped in paper, hand-lettered price tags, shoppers blurred behind. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "A farmers market stall overflowing with strawberries in green cardboard baskets and bunches of peonies wrapped in paper, hand-lettered price tags, shoppers blurred behind.",
+   "date": "2024-05-18T10:30",
+   "place": "Portland Farmers Market",
+   "style": "phone",
+   "cam": "phone",
+   "kw": [
+    "market",
+    "strawberries",
+    "flowers"
+   ],
+   "node": "nano-banana-2",
+   "run": "NAWXDcJ96KJ",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/9d7b25f3-dc8a-4c68-9b26-3efc279fc329.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/EpMzVYeRw2Z41LkD2BpvD_xYRasWiO.jpg",
+     "asset": "6JOBwHgK7vp"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/fc2123da-b576-4e41-a81c-a4de8e806223.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/5nlfNiiOsHqEnJYONJRoC_pK18RfW2.jpg",
+     "asset": "kYop8Sb8REG"
+    }
+   ]
+  },
+  {
+   "id": "a06",
+   "model": "nb2",
+   "n": 2,
+   "ar": "2:3",
+   "refs": [],
+   "prompt": "Skógafoss waterfall in Iceland, a tiny figure in a red rain jacket at its base for scale, a bright rainbow in the spray, green cliffs. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Skógafoss waterfall in Iceland, a tiny figure in a red rain jacket at its base for scale, a bright rainbow in the spray, green cliffs.",
+   "date": "2024-06-08T13:15",
+   "place": "Skógafoss, Iceland",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Iceland",
+   "kw": [
+    "waterfall",
+    "rainbow",
+    "iceland"
+   ],
+   "node": "nano-banana-2",
+   "run": "vm84AtV0YRV",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/aa87e8aa-50a5-404b-8c0a-0569b0b29371.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/mDHEtgYY_HSiJ4Oym-oJl_Pe64LIuK.jpg",
+     "asset": "RYP87c8Wnvg"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/d2bb38f5-69a9-4177-93fa-829e535078d5.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/klnXD6shRwjz_eDah8SQz_LwoTQRUH.jpg",
+     "asset": "eEP7LUNx8z9"
+    }
+   ]
+  },
+  {
+   "id": "a07",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "Reynisfjara black sand beach in Iceland, hexagonal basalt columns, the Reynisdrangar sea stacks in the distance, moody clouds, surf rushing up the dark sand. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Reynisfjara black sand beach in Iceland, hexagonal basalt columns, the Reynisdrangar sea stacks in the distance, moody clouds, surf rushing up the dark sand.",
+   "date": "2024-06-09T16:40",
+   "place": "Reynisfjara, Iceland",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Iceland",
+   "kw": [
+    "beach",
+    "basalt",
+    "iceland"
+   ],
+   "node": "nano-banana-2",
+   "run": "OAz2BTp9Drp",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/71061182-b54d-4472-9971-48fb505cfeec.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/0h2r2hFc9kc_47_uGdSh7_Lam01PHk.jpg",
+     "asset": "7D6GPIN4bgq"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/500f6e9c-3bbc-4b39-b49e-237d6932f3ad.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/RfMg5lR7YhkDega2d7Xyk_9sL0zDk5.jpg",
+     "asset": "opwDgsgenaX"
+    }
+   ]
+  },
+  {
+   "id": "a08",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "Jökulsárlón glacier lagoon under the midnight sun, blue and white icebergs floating on still water, a soft peach sky reflected. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Jökulsárlón glacier lagoon under the midnight sun, blue and white icebergs floating on still water, a soft peach sky reflected.",
+   "date": "2024-06-10T23:30",
+   "place": "Jökulsárlón, Iceland",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Iceland",
+   "kw": [
+    "glacier",
+    "icebergs",
+    "midnight sun",
+    "iceland"
+   ],
+   "node": "nano-banana-2",
+   "run": "kb8JvcY2onY",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/37ed035a-f29b-4bd2-b029-0aa3c57a2647.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bef/36ljKjSXzK6a1JpRdMWKT_cGUmH8ef.jpg",
+     "asset": "5zAo6Iy_8qV"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/0e26a9d2-7213-4d2f-af23-068c4d49a45e.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bef/vNaiEiWK9XFQjZvHchjkp_d5z5xEer.jpg",
+     "asset": "GP4_GiWLnA0"
+    }
+   ]
+  },
+  {
+   "id": "a09",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:4",
+   "refs": [
+    "Maya",
+    "Sam"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is Sam (the man)). Create a brand-new, natural photo (not a portrait against a grey wall): A selfie of Maya and Sam at a glacier lagoon in Iceland, wind-blown hair, rain jackets zipped to the chin, icebergs behind them, both laughing. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "A selfie of Maya and Sam at a glacier lagoon in Iceland, wind-blown hair, rain jackets zipped to the chin, icebergs behind them, both laughing.",
+   "date": "2024-06-10T22:50",
+   "place": "Jökulsárlón, Iceland",
+   "style": "phone",
+   "cam": "phone-front",
+   "album": "Iceland",
+   "kw": [
+    "selfie",
+    "iceland"
+   ],
+   "node": "nano-banana-2",
+   "run": "AArRrCnKbyn",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/c8930920-3f6e-4ab1-9798-79219646d265.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/4qpdNC-pm4-1ElaKsBjg0_M74ty9JE.jpg",
+     "asset": "vXvyZh1_P28"
+    }
+   ]
+  },
+  {
+   "id": "a10",
+   "model": "nb2",
+   "n": 1,
+   "ar": "16:9",
+   "refs": [],
+   "prompt": "A small white campervan parked on the shoulder of Iceland's Ring Road, an empty road curving into vast green lava fields under dramatic clouds. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "A small white campervan parked on the shoulder of Iceland's Ring Road, an empty road curving into vast green lava fields under dramatic clouds.",
+   "date": "2024-06-11T14:00",
+   "place": "Ring Road, Iceland",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Iceland",
+   "kw": [
+    "road trip",
+    "campervan",
+    "iceland"
+   ],
+   "node": "nano-banana-2",
+   "run": "KArzXsb5AYb",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/61f66a7e-b515-43e1-929d-bf89d8bedc0f.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/_IzJm4kZu9v3gkcvN530a_27fG49vE.jpg",
+     "asset": "XA5XyTKXRLk"
+    }
+   ]
+  },
+  {
+   "id": "a11",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "A puffin standing on the grassy edge of a sea cliff with fish in its beak, telephoto, creamy out-of-focus ocean behind. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "A puffin standing on the grassy edge of a sea cliff with fish in its beak, telephoto, creamy out-of-focus ocean behind.",
+   "date": "2024-06-12T10:10",
+   "place": "Dyrhólaey, Iceland",
+   "style": "camera",
+   "cam": "a7c-tele",
+   "album": "Iceland",
+   "kw": [
+    "puffin",
+    "bird",
+    "wildlife",
+    "iceland"
+   ],
+   "node": "nano-banana-2",
+   "run": "aVmymi58yn5",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/9361f022-4605-4879-a694-362c7392895c.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/BMHK5utqsU_Orz2osCM39_HsX6P8Hq.jpg",
+     "asset": "ppOxkHKOk1m"
+    }
+   ]
+  },
+  {
+   "id": "a12",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Pepper"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Pepper (the border collie)). Create a brand-new, natural photo (not a portrait against a grey wall): Pepper as an eight-week-old border collie puppy, asleep curled in a woven basket by a front door, a tiny red collar, evening light. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Pepper as an eight-week-old border collie puppy, asleep curled in a woven basket by a front door, a tiny red collar, evening light.",
+   "date": "2024-08-24T18:20",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "kw": [
+    "puppy",
+    "dog"
+   ],
+   "node": "nano-banana-2",
+   "run": "Rdx5OcazZra",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/df4e7e91-6a12-4223-adf5-285b988cba64.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/HTaTP1p7O7r4W4dGjwTvt_U2EVHU1X.jpg",
+     "asset": "BPL_oIDKm2z"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/428f2da5-d6ec-4fb0-a3ab-e3f82cccae12.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/hs-yH9o8SfuNwoTnYjXBI_cc9LT1hE.jpg",
+     "asset": "kYoa8Hb8REG"
+    }
+   ]
+  },
+  {
+   "id": "a13",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Leo",
+    "Pepper"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy), reference 2 is Pepper (the border collie)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo at four years old sitting on a living room rug cuddling Pepper as a tiny eight-week-old border collie puppy, the puppy licking his chin, Leo squeezing his eyes shut with joy. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Leo at four years old sitting on a living room rug cuddling Pepper as a tiny eight-week-old border collie puppy, the puppy licking his chin, Leo squeezing his eyes shut with joy.",
+   "date": "2024-08-25T10:00",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "kw": [
+    "puppy",
+    "dog"
+   ],
+   "node": "nano-banana-2",
+   "run": "Yd09LUR201R",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/8b8dab12-448e-4f72-b7ea-8d6d1128dc83.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/os0gFSXNLtIjc-bSa-zPE_5eDs7jbC.jpg",
+     "asset": "ZmVXnIbNzp6"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/f55131f3-aabb-4d03-89df-225b9e19ca01.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/mVNnneqXyWj7NR7SAQGxU_G0lqv2fD.jpg",
+     "asset": "ppOYkFKOk1m"
+    }
+   ]
+  },
+  {
+   "id": "a14",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Sam",
+    "June",
+    "Leo"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Sam (the man), reference 2 is June (the little girl), reference 3 is Leo (the boy)). Create a brand-new, natural photo (not a portrait against a grey wall): Sam carrying June, a one-year-old toddler in a knit hat, on his shoulders while Leo, age four, pulls a red wagon of pumpkins through a pumpkin patch, golden autumn light, hay bales. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Sam carrying June, a one-year-old toddler in a knit hat, on his shoulders while Leo, age four, pulls a red wagon of pumpkins through a pumpkin patch, golden autumn light, hay bales.",
+   "date": "2024-10-19T15:45",
+   "place": "Sauvie Island, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Autumn",
+   "kw": [
+    "pumpkin patch",
+    "autumn"
+   ],
+   "node": "nano-banana-2",
+   "run": "vm8A1IV0YRV",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/97207812-8d8d-4f27-88e1-b2e5e63c2d32.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/fCGe098SydEH47VPCus-l_bdLUHGa6.jpg",
+     "asset": "9EVgZid6P74"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/b2e44a51-a5c2-4d6c-9063-b5ab57dcddfb.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/KXzAnOAibZ_BOsL5bXTTW_OxOH7ll5.jpg",
+     "asset": "OV7B0TJk2Y_"
+    }
+   ]
+  },
+  {
+   "id": "a15",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [
+    "Rosa"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Rosa (the grandmother)). Create a brand-new, natural photo (not a portrait against a grey wall): Rosa lighting candles on a long Christmas Eve dinner table set with bacalhau, roasted potatoes, a bowl of clementines, pine garland and warm fairy lights. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Rosa lighting candles on a long Christmas Eve dinner table set with bacalhau, roasted potatoes, a bowl of clementines, pine garland and warm fairy lights.",
+   "date": "2024-12-24T19:30",
+   "place": "Portland, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "album": "Christmas",
+   "kw": [
+    "christmas",
+    "dinner",
+    "candles"
+   ],
+   "node": "nano-banana-2",
+   "run": "XEG9dfVe7JV",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/0cf0025e-c83f-4e74-a518-94cf322be7e9.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/nuFQcZSmd5UT-IodtkWge_wnuv3bXT.jpg",
+     "asset": "BPLxoUDKm2z"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/a46cab2e-d9a6-4d7e-be41-334b8203d881.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/eO_pXCD4Ii7CUB_XoCo1j_tUAkmJ7Z.jpg",
+     "asset": "kYoy8Fb8REG"
+    }
+   ]
+  },
+  {
+   "id": "a16",
+   "model": "nb2",
+   "n": 1,
+   "ar": "4:3",
+   "refs": [],
+   "prompt": "A Portuguese bolo rei (king cake) studded with candied fruit and nuts on a lace tablecloth, a dusting of powdered sugar, a cake knife beside it. Food photograph taken on a smartphone, natural window light, realistic textures, appetizing but unstyled. No text, no watermark, no border.",
+   "scene": "A Portuguese bolo rei (king cake) studded with candied fruit and nuts on a lace tablecloth, a dusting of powdered sugar, a cake knife beside it.",
+   "date": "2024-12-24T21:10",
+   "place": "Portland, Oregon",
+   "style": "food",
+   "cam": "phone",
+   "album": "Christmas",
+   "kw": [
+    "bolo rei",
+    "cake",
+    "christmas"
+   ],
+   "node": "nano-banana-2",
+   "run": "rw85kFBNpwB",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/c1f7881d-82ec-4a01-829e-94bbc011ce83.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bec/QuNJsJjGevffNGo5Zfzy6_3bMIOI0h.jpg",
+     "asset": "mpO6_UwrJk0"
+    }
+   ]
+  },
+  {
+   "id": "b01",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Leo",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy), reference 2 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo, age five, and June, a toddler, drawing with fat crayons at a kitchen table on a rainy afternoon, raindrops on the window, paper covered in suns and dinosaurs. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Leo, age five, and June, a toddler, drawing with fat crayons at a kitchen table on a rainy afternoon, raindrops on the window, paper covered in suns and dinosaurs.",
+   "date": "2025-01-25T15:30",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "kw": [
+    "drawing",
+    "rainy day"
+   ],
+   "node": "nano-banana-2",
+   "run": "mbn4pUZERVZ",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/726f7d39-08cc-4850-96d4-17fb0901c46b.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/8EXEe79Ej2euGslP8720q_FHk7Bcrk.jpg",
+     "asset": "vXvVkH1_P28"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/3c6f7b96-c16d-4fbd-ad50-d55168bc8768.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/ThL9rjf8Xdhn_z4s0osdv_h4ysXvR1.jpg",
+     "asset": "XA5rgIKXRLk"
+    }
+   ]
+  },
+  {
+   "id": "b02",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Leo",
+    "Maya"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy), reference 2 is Maya (the woman)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo blowing out five candles on a homemade rocket ship birthday cake, cheeks puffed, Maya behind him clapping, paper streamers and balloons. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Leo blowing out five candles on a homemade rocket ship birthday cake, cheeks puffed, Maya behind him clapping, paper streamers and balloons.",
+   "date": "2025-02-15T17:00",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Birthdays",
+   "kw": [
+    "birthday",
+    "cake",
+    "candles"
+   ],
+   "node": "nano-banana-2",
+   "run": "bNa4Xs0RVn0",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/55b84d1e-8c44-4c78-8b62-0d2f520975f4.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/0NyhUSOfZ463dhPuqQUji_MSfPglIV.jpg",
+     "asset": "q9PWnfx4D1W"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/87ed6bc2-d156-4a3f-b6a5-7298b1c5d53d.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/33M3hQDEDLAX_hFY5_EDO_qiblprmN.jpg",
+     "asset": "9EV6oFd6P74"
+    }
+   ]
+  },
+  {
+   "id": "b03",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:4",
+   "refs": [
+    "Miso"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Miso (the orange tabby cat)). Create a brand-new, natural photo (not a portrait against a grey wall): Miso the cat asleep in a patch of afternoon sun on top of a stack of hardcover books on a window seat, one paw over his nose. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Miso the cat asleep in a patch of afternoon sun on top of a stack of hardcover books on a window seat, one paw over his nose.",
+   "date": "2025-03-08T14:20",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "kw": [
+    "cat",
+    "sunbeam"
+   ],
+   "node": "nano-banana-2",
+   "run": "LArNbUnJVan",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/c913d330-8f57-4538-9de9-550cbba71584.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/NZBrgG_wACPm-RCFk1TId_RfwhEXo3.jpg",
+     "asset": "8xan0h8B6A2"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/daaea9c4-123e-4a91-928f-a1be09469cff.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/VYCqXHb2Ax_ZuqTLN7AHk_VPrZhIaa.jpg",
+     "asset": "bJPxviqXoeP"
+    }
+   ]
+  },
+  {
+   "id": "b04",
+   "model": "nb2",
+   "n": 2,
+   "ar": "2:3",
+   "refs": [],
+   "prompt": "A yellow Tram 28 climbing a steep, narrow cobbled street in Alfama, Lisbon, pastel buildings with laundry on wrought-iron balconies, morning sun. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "A yellow Tram 28 climbing a steep, narrow cobbled street in Alfama, Lisbon, pastel buildings with laundry on wrought-iron balconies, morning sun.",
+   "date": "2025-04-13T09:20",
+   "place": "Alfama, Lisbon",
+   "style": "land",
+   "cam": "x100",
+   "album": "Lisbon",
+   "kw": [
+    "tram",
+    "lisbon",
+    "street"
+   ],
+   "node": "nano-banana-2",
+   "run": "4VRBBtgJw5g",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/f830f420-1b65-46c3-853a-96f3fcb5f776.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/pBq9LxN2w2EkeEG0NF0eL_AFVS6idF.jpg",
+     "asset": "azPDEsoNa19"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/80ad1d3f-e1bf-4ab9-a9a6-2efd9d286b40.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/7B7s8DvEwtUsEVjjx7LD2_G31DFuLP.jpg",
+     "asset": "1AKdzSNJWO6"
+    }
+   ]
+  },
+  {
+   "id": "b05",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [
+    "Rosa",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Rosa (the grandmother), reference 2 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Rosa holding June's hand (June is two), both looking up at a wall of blue-and-white azulejo tiles on a building facade in Alfama, Lisbon, June pointing. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Rosa holding June's hand (June is two), both looking up at a wall of blue-and-white azulejo tiles on a building facade in Alfama, Lisbon, June pointing.",
+   "date": "2025-04-13T11:30",
+   "place": "Alfama, Lisbon",
+   "style": "camera",
+   "cam": "x100",
+   "album": "Lisbon",
+   "kw": [
+    "azulejo",
+    "tiles",
+    "lisbon"
+   ],
+   "node": "nano-banana-2",
+   "run": "7BrqDIdW9Zd",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/2c90f8c2-13f6-410f-8da5-a845f8732763.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bed/OZBaKso6G4XWBDHIojptL_Rr0xf4xQ.jpg",
+     "asset": "PdLk4iGx_51"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/50a73bf6-84e5-4c82-a1aa-cdc6f1eeaf6f.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bed/-ILWonXGluUT57R3N5-TH_8mqAGJMV.jpg",
+     "asset": "LV1qRfyPWwO"
+    }
+   ]
+  },
+  {
+   "id": "b06",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [],
+   "prompt": "Two pastéis de nata with blistered caramelized tops on a white saucer on a marble café counter, a cinnamon shaker and a small espresso cup nearby. Food photograph taken on a smartphone, natural window light, realistic textures, appetizing but unstyled. No text, no watermark, no border.",
+   "scene": "Two pastéis de nata with blistered caramelized tops on a white saucer on a marble café counter, a cinnamon shaker and a small espresso cup nearby.",
+   "date": "2025-04-13T16:00",
+   "place": "Belém, Lisbon",
+   "style": "food",
+   "cam": "phone",
+   "album": "Lisbon",
+   "kw": [
+    "pastel de nata",
+    "pastry",
+    "cafe",
+    "lisbon"
+   ],
+   "node": "nano-banana-2",
+   "run": "5BeZdC2neW2",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/142eba55-736b-4717-bbd4-7102655a0b35.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bed/tBN7GY6Y2JpPvV8DxiuUY_BHh8dh3O.jpg",
+     "asset": "4Wp7mieZmk0"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/fdc0dbab-93d0-49b1-9a9c-b6c61a0b3cca.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bed/1QPti3s80JQiOlO4XGbKn_hfzYVvmM.jpg",
+     "asset": "vXvGZF1_P28"
+    }
+   ]
+  },
+  {
+   "id": "b07",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "Pena Palace in Sintra rising above a forested hill in morning mist, its yellow and red towers glowing in the first sun. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Pena Palace in Sintra rising above a forested hill in morning mist, its yellow and red towers glowing in the first sun.",
+   "date": "2025-04-15T09:40",
+   "place": "Sintra, Portugal",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Lisbon",
+   "kw": [
+    "palace",
+    "sintra"
+   ],
+   "node": "nano-banana-2",
+   "run": "qm8oXTOoq8O",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/28127fac-99f0-473e-9e76-48d6325ceae5.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bef/TcybBsOHnF53rjNaGeN-3_NHJpAhz2.jpg",
+     "asset": "DP5XVImZ_ON"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/11cb85e3-6549-4c2f-a5fd-0a183bace68a.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bef/sX9RMX5VX772pA_08-iib_pyXWa4GT.jpg",
+     "asset": "xqKZNfOqNYx"
+    }
+   ]
+  },
+  {
+   "id": "b08",
+   "model": "nb2",
+   "n": 2,
+   "ar": "16:9",
+   "refs": [
+    "Maya",
+    "Sam",
+    "Leo",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is Sam (the man), reference 3 is Leo (the boy), reference 4 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): A family of four seen from behind, sitting on the stone wall of a miradouro overlooking Lisbon's terracotta rooftops and the river at sunset: Maya, Sam, Leo, and June on Sam's lap. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "A family of four seen from behind, sitting on the stone wall of a miradouro overlooking Lisbon's terracotta rooftops and the river at sunset: Maya, Sam, Leo, and June on Sam's lap.",
+   "date": "2025-04-16T19:45",
+   "place": "Miradouro da Senhora do Monte, Lisbon",
+   "style": "camera",
+   "cam": "x100",
+   "album": "Lisbon",
+   "kw": [
+    "sunset",
+    "viewpoint",
+    "lisbon"
+   ],
+   "node": "nano-banana-2",
+   "run": "mbnxEIZERVZ",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/fcd3bee1-4128-4ab7-b100-1d0cc093a46e.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/bruh6fJzkuvE1O2DogY4t_y35q3YnV.jpg",
+     "asset": "q9PEyfx4D1W"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/179a0234-7246-4b9f-88e3-9b85aedc1305.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/0LpOywVNKTmXWFnWjqBmU_8GE4k0d8.jpg",
+     "asset": "9EVZZfd6P74"
+    }
+   ]
+  },
+  {
+   "id": "b09",
+   "model": "nb2",
+   "n": 1,
+   "ar": "4:3",
+   "refs": [
+    "Leo"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo, age five, running through a flock of pigeons in a wide sunlit plaza in Lisbon, the yellow arcades and triumphal arch behind him, arms outstretched. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Leo, age five, running through a flock of pigeons in a wide sunlit plaza in Lisbon, the yellow arcades and triumphal arch behind him, arms outstretched.",
+   "date": "2025-04-16T12:20",
+   "place": "Praça do Comércio, Lisbon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Lisbon",
+   "kw": [
+    "pigeons",
+    "plaza",
+    "lisbon"
+   ],
+   "node": "nano-banana-2",
+   "run": "1VmoXHp0gdp",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/05aaec9b-7305-4e7c-a0ec-0843e8a7bd4a.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/a_H6nslUUpIaTvPHQEei4_Z6kDQOt6.jpg",
+     "asset": "OV7_0iJk2Y_"
+    }
+   ]
+  },
+  {
+   "id": "b10",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:4",
+   "refs": [],
+   "prompt": "A printed café receipt lying on a marble café table in Lisbon. The receipt reads 'PASTELARIA ALFAMA', 'Rua de São Miguel 12, Lisboa', then lines '2 Pastel de Nata  2,60', '1 Galão  1,80', '1 Bica  0,90', 'TOTAL EUR  5,30', 'Obrigado!'. Photographed flat on a table with a smartphone, realistic paper texture, sharp and legible printed text, natural light. No watermark, no border.",
+   "scene": "A printed café receipt lying on a marble café table in Lisbon. The receipt reads 'PASTELARIA ALFAMA', 'Rua de São Miguel 12, Lisboa', then lines '2 Pastel de Nata  2,60', '1 Galão  1,80', '1 Bica  0,90', 'TOTAL EUR  5,30', 'Obrigado!'.",
+   "date": "2025-04-13T16:25",
+   "place": "Lisbon",
+   "style": "doc",
+   "cam": "phone",
+   "album": "Lisbon",
+   "label": "receipts",
+   "kw": [
+    "receipt"
+   ],
+   "text": "PASTELARIA ALFAMA Rua de São Miguel 12, Lisboa 2 Pastel de Nata 2,60 1 Galão 1,80 1 Bica 0,90 TOTAL EUR 5,30 Obrigado!",
+   "node": "nano-banana-2",
+   "run": "yNdAZi2bPR2",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/407c5f3e-96b1-4451-9f9f-703934e6c4f2.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/Z8NSomo0e4amN_WbZppCt_LOIn3sRS.jpg",
+     "asset": "4Wp6mTeZmk0"
+    }
+   ]
+  },
+  {
+   "id": "b11",
+   "model": "nb2",
+   "n": 1,
+   "ar": "2:3",
+   "refs": [],
+   "prompt": "Belém Tower on the Tagus river at golden hour, its white limestone glowing warm, gentle waves, a few gulls. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Belém Tower on the Tagus river at golden hour, its white limestone glowing warm, gentle waves, a few gulls.",
+   "date": "2025-04-16T17:40",
+   "place": "Belém, Lisbon",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Lisbon",
+   "kw": [
+    "tower",
+    "river",
+    "golden hour",
+    "lisbon"
+   ],
+   "node": "nano-banana-2",
+   "run": "e6ebnFmaBwm",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/100f074a-b137-4737-8047-cdd40b3d1111.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/ImjBaOXgWAn2qFvrHBqO7_QenPrV4P.jpg",
+     "asset": "mpOz_IwrJk0"
+    }
+   ]
+  },
+  {
+   "id": "b12",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Maya",
+    "Leo",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is Leo (the boy), reference 3 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Maya laughing in bed on Mother's Day holding a breakfast tray the kids made: wobbly toast, sliced strawberries, wildflowers in a jam jar and a crayon card, with Leo and June climbing onto the bed. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Maya laughing in bed on Mother's Day holding a breakfast tray the kids made: wobbly toast, sliced strawberries, wildflowers in a jam jar and a crayon card, with Leo and June climbing onto the bed.",
+   "date": "2025-05-11T08:30",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "kw": [
+    "mother's day",
+    "breakfast"
+   ],
+   "node": "nano-banana-2",
+   "run": "bNaggs0RVn0",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/34a97f8a-8c8b-4dd2-8cb3-73f9132d100d.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf1/RWQo6btw9CGzVY5qeXaf8_PLL1XlNO.jpg",
+     "asset": "8xa0RU8B6A2"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/95cfb67f-4366-492c-9f59-e5f8aac01a3c.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf1/6MUvrwKSgLvh5Nfgw0WzY_bgGJKC8J.jpg",
+     "asset": "bJP0zTqXoeP"
+    }
+   ]
+  },
+  {
+   "id": "b13",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "June",
+    "Rosa"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is June (the little girl), reference 2 is Rosa (the grandmother)). Create a brand-new, natural photo (not a portrait against a grey wall): June turning two, in a strawberry-print dress, reaching for a strawberry cake with two candles while Rosa steadies the plate and laughs, a backyard table with paper lanterns. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "June turning two, in a strawberry-print dress, reaching for a strawberry cake with two candles while Rosa steadies the plate and laughs, a backyard table with paper lanterns.",
+   "date": "2025-06-14T16:10",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Birthdays",
+   "kw": [
+    "birthday",
+    "cake"
+   ],
+   "node": "nano-banana-2",
+   "run": "6er0acZzX5Z",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/9153c926-ad14-4cc0-9f36-571037da9389.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bea/L3Wbegxu4O9uAq4ZE9ltR_Ng2pLHS3.jpg",
+     "asset": "nPmyZiDbmpN"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/2b419d79-65ba-4c01-8260-3d5aba9a55d2.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bea/5eb0LhuyUFji2w5GQjoay_rWMT9q5t.jpg",
+     "asset": "dxPXJhzm0y5"
+    }
+   ]
+  },
+  {
+   "id": "b14",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "Haystack Rock at Cannon Beach at sunset, wet sand mirroring the orange sky, tide pools, a few distant silhouettes walking. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Haystack Rock at Cannon Beach at sunset, wet sand mirroring the orange sky, tide pools, a few distant silhouettes walking.",
+   "date": "2025-07-04T20:45",
+   "place": "Cannon Beach, Oregon",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Cannon Beach",
+   "kw": [
+    "beach",
+    "sunset",
+    "haystack rock"
+   ],
+   "node": "nano-banana-2",
+   "run": "wK8ART5_XD5",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/5b9a1a6b-f243-4121-80e1-aa8977a6320e.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bea/WQ2i7QF_yx3mRn2_sDKkk_bOhyG9wD.jpg",
+     "asset": "W9PXPS5dZzB"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/d851b4ad-d4f0-43c5-ae38-b12623745708.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bea/rOjqkVLeDNM95C6vt9_ul_U5nexoau.jpg",
+     "asset": "zN9XKHEA9_R"
+    }
+   ]
+  },
+  {
+   "id": "b15",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [
+    "Pepper"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Pepper (the border collie)). Create a brand-new, natural photo (not a portrait against a grey wall): Pepper the border collie sprinting along wet sand chasing a bright orange frisbee, ears flying, sea spray, motion and joy. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Pepper the border collie sprinting along wet sand chasing a bright orange frisbee, ears flying, sea spray, motion and joy.",
+   "date": "2025-07-05T10:30",
+   "place": "Cannon Beach, Oregon",
+   "style": "camera",
+   "cam": "a7c",
+   "album": "Cannon Beach",
+   "kw": [
+    "dog",
+    "beach",
+    "frisbee"
+   ],
+   "node": "nano-banana-2",
+   "run": "VDoZzf8b_N8",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/d029658d-cefa-4fcb-8a0b-31be82958b3b.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bea/Er04sXlO-ARvyoBqumsrr_i65hmY6l.jpg",
+     "asset": "JVGZDTV50E7"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/e40b2f3e-5d6a-40cf-b02d-a2c83dd3cd31.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bea/NbS-NO88TsY4r8mzathYL_8L83LhYz.jpg",
+     "asset": "DP52VUmZ_ON"
+    }
+   ]
+  },
+  {
+   "id": "b16",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [
+    "Sam",
+    "Leo"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Sam (the man), reference 2 is Leo (the boy)). Create a brand-new, natural photo (not a portrait against a grey wall): Sam and Leo, age five, crouching over a tide pool looking closely at a purple sea star and green anemones, their reflections in the water. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Sam and Leo, age five, crouching over a tide pool looking closely at a purple sea star and green anemones, their reflections in the water.",
+   "date": "2025-07-05T09:15",
+   "place": "Cannon Beach, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "album": "Cannon Beach",
+   "kw": [
+    "tide pool",
+    "sea star",
+    "beach"
+   ],
+   "node": "nano-banana-2",
+   "run": "PAJ2eCbVPLb",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/edc83956-c80c-4052-9a12-8074a5860274.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/oOc-EKyt23EP3OULy6O___QguSY1dO.jpg",
+     "asset": "opwygugenaX"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/b6d1734e-f680-40fc-ae97-c8c192f4a888.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/_-ii2AGaxBpJmT2OXao5x_SSn6iAzj.jpg",
+     "asset": "5zAg6Uy_8qV"
+    }
+   ]
+  },
+  {
+   "id": "b17",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Maya",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Maya and June (two years old, in a floppy sun hat) building a lopsided sandcastle with a red bucket and spade, June patting the sand proudly. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Maya and June (two years old, in a floppy sun hat) building a lopsided sandcastle with a red bucket and spade, June patting the sand proudly.",
+   "date": "2025-07-06T14:00",
+   "place": "Cannon Beach, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Cannon Beach",
+   "kw": [
+    "sandcastle",
+    "beach"
+   ],
+   "node": "nano-banana-2",
+   "run": "1Vmqvfp0gdp",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/b524f54e-3581-4880-a469-60388674254f.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/foj5tQEwe5PYRUwLvGfSW_zyOccoeR.jpg",
+     "asset": "zN9VACEA9_R"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/79b833ac-2ddc-4799-aaac-90f2560ebb17.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/Sqp6aKC_F6NlYqTdu_e5Y_F3R7HLmt.jpg",
+     "asset": "JVGnAiV50E7"
+    }
+   ]
+  },
+  {
+   "id": "b18",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Maya",
+    "Sam",
+    "Leo",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is Sam (the man), reference 3 is Leo (the boy), reference 4 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): A beach bonfire at dusk, Maya, Sam, Leo and June roasting marshmallows on long sticks, faces lit warm by the firelight, deep blue sky behind. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "A beach bonfire at dusk, Maya, Sam, Leo and June roasting marshmallows on long sticks, faces lit warm by the firelight, deep blue sky behind.",
+   "date": "2025-07-06T21:30",
+   "place": "Cannon Beach, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Cannon Beach",
+   "kw": [
+    "bonfire",
+    "marshmallows",
+    "beach"
+   ],
+   "node": "nano-banana-2",
+   "run": "KArNXfb5AYb",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/e0beee0c-f2de-4381-b5b5-4f548b156e26.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/qPcmCc-14qjKc5MdINInH_XpOR5Btx.jpg",
+     "asset": "g7A55TA4v7G"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/3dba2e0a-e9ff-452b-aae9-160dc183290f.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/r0LV1_CqhEe0ruCDKfDBA_4ZhevQjv.jpg",
+     "asset": "_9xzXHR2nkp"
+    }
+   ]
+  },
+  {
+   "id": "b18r",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Maya",
+    "Sam",
+    "Leo",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is Sam (the man), reference 3 is Leo (the boy), reference 4 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): A beach bonfire at dusk with exactly four people and no one else: Maya and Sam sitting on a driftwood log with Leo, age five, and June, age two, between them. Maya, Sam and Leo each hold a long stick toasting a marshmallow over the flames; June watches, wrapped in a blanket on Maya's lap. The fire burns in a ring of stones a few feet in front of their feet. Faces lit warm and orange by the firelight, the deep blue evening sky and the sea behind them. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "A beach bonfire at dusk with exactly four people and no one else: Maya and Sam sitting on a driftwood log with Leo, age five, and June, age two, between them. Maya, Sam and Leo each hold a long stick toasting a marshmallow over the flames; June watches, wrapped in a blanket on Maya's lap. The fire burns in a ring of stones a few feet in front of their feet. Faces lit warm and orange by the firelight, the deep blue evening sky and the sea behind them.",
+   "date": "2025-07-06T21:30",
+   "place": "Cannon Beach, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Cannon Beach",
+   "kw": [
+    "bonfire",
+    "marshmallows",
+    "beach"
+   ],
+   "node": "nano-banana-2",
+   "run": "PAJ9nibVPLb",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/aecc9bfe-1743-480d-80c7-aa1b4d724ea4.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6d79/tS_omJebiYAyZPAPSgtN1_2vUzVEwy.jpg",
+     "asset": "4WpRRseZmk0"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/ce8d401e-5768-46b3-9b9e-409dd1dfdad0.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6d79/AmBnwByVFbc3T9L_4okOV_jwKliOPn.jpg",
+     "asset": "vXv8zI1_P28"
+    }
+   ]
+  },
+  {
+   "id": "b19",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:4",
+   "refs": [
+    "Sam",
+    "Leo"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Sam (the man), reference 2 is Leo (the boy)). Create a brand-new, natural photo (not a portrait against a grey wall): Sam and Leo in a backyard vegetable garden holding a wicker basket of heirloom tomatoes, zucchini and a giant sunflower head, late summer evening light. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Sam and Leo in a backyard vegetable garden holding a wicker basket of heirloom tomatoes, zucchini and a giant sunflower head, late summer evening light.",
+   "date": "2025-08-16T18:00",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Home",
+   "kw": [
+    "garden",
+    "tomatoes",
+    "harvest"
+   ],
+   "node": "nano-banana-2",
+   "run": "nX84pSEkwoE",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/e04a199c-a52d-4482-a064-b7600d028f41.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/ujsJKDxXqmvgq_-L4VQmC_wtgomCLz.jpg",
+     "asset": "_9xzRTR2nkp"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/c01cab8f-e7db-4a7b-a776-9b2168bc1bbe.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/XZrGzObSMNJJR-_dv_VBd_XlhC3h2Q.jpg",
+     "asset": "8xanRC8B6A2"
+    }
+   ]
+  },
+  {
+   "id": "b20",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:4",
+   "refs": [
+    "Leo"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo on the front steps on his first day of kindergarten wearing a backpack that is too big for him, holding a small chalkboard that reads 'First day of Kindergarten'. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Leo on the front steps on his first day of kindergarten wearing a backpack that is too big for him, holding a small chalkboard that reads 'First day of Kindergarten'.",
+   "date": "2025-09-02T07:50",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "School",
+   "kw": [
+    "first day",
+    "school",
+    "kindergarten"
+   ],
+   "text": "First day of Kindergarten",
+   "node": "nano-banana-2",
+   "run": "yNdOkc2bPR2",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/3f3a13f8-3421-412f-8c73-ad2d4edee325.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/RApZUUfB28jF9aZ7k_kAL_quyG0ITy.jpg",
+     "asset": "azPGEtoNa19"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/13544915-31ea-4da4-a26f-cbd9af74260d.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/ltqs6VrFuWWQ2skDjUi1l_U4wx6xl1.jpg",
+     "asset": "1AKxzSNJWO6"
+    }
+   ]
+  },
+  {
+   "id": "b21",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:4",
+   "refs": [
+    "Maya",
+    "Leo"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is Leo (the boy)). Create a brand-new, natural photo (not a portrait against a grey wall): Maya and Leo seen from behind walking hand in hand down a leafy sidewalk toward a school, his big backpack bouncing. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Maya and Leo seen from behind walking hand in hand down a leafy sidewalk toward a school, his big backpack bouncing.",
+   "date": "2025-09-02T08:05",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "School",
+   "kw": [
+    "school",
+    "walk"
+   ],
+   "node": "nano-banana-2",
+   "run": "gb8wLFDdZ0D",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/d1252729-8b0e-445f-affc-e7bb16526adf.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/aP0w2M2hAo0VYVGN2dD7D_AFCFFwMW.jpg",
+     "asset": "RYP67U8Wnvg"
+    }
+   ]
+  },
+  {
+   "id": "b22",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:4",
+   "refs": [
+    "Leo",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy), reference 2 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo in a homemade cardboard astronaut costume and June dressed as a bumblebee on a front porch at dusk, carved jack-o'-lanterns glowing on the steps. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Leo in a homemade cardboard astronaut costume and June dressed as a bumblebee on a front porch at dusk, carved jack-o'-lanterns glowing on the steps.",
+   "date": "2025-10-31T18:20",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Autumn",
+   "kw": [
+    "halloween",
+    "costume",
+    "jack-o'-lantern"
+   ],
+   "node": "nano-banana-2",
+   "run": "_OBR4Iad4oa",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/37cd2749-66e0-4738-b369-e3e40d6f7c9d.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/s9RbYHZ5wl0zC9YAt6WKz_XateWDzO.jpg",
+     "asset": "eEPqLhNx8z9"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/b83d0ad5-111e-40ab-9d33-9ca6bfc2051b.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/1rFtgRG7YVbKPUYk2iNkQ_xRfKWGRL.jpg",
+     "asset": "yq6p4Cde0wL"
+    }
+   ]
+  },
+  {
+   "id": "b23",
+   "model": "nb2",
+   "n": 2,
+   "ar": "2:3",
+   "refs": [],
+   "prompt": "The tunnel of vermilion torii gates at Fushimi Inari in Kyoto in the early morning, no crowds, soft light filtering through the forest. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "The tunnel of vermilion torii gates at Fushimi Inari in Kyoto in the early morning, no crowds, soft light filtering through the forest.",
+   "date": "2025-11-15T06:45",
+   "place": "Fushimi Inari, Kyoto",
+   "style": "land",
+   "cam": "x100",
+   "album": "Kyoto",
+   "kw": [
+    "torii",
+    "shrine",
+    "kyoto"
+   ],
+   "node": "nano-banana-2",
+   "run": "8Br9pFzbo_z",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/7cd9bcc9-755f-4e15-a9d0-f7f9c0fc21ad.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/6zAewfmsyMxSnEdDXo7MT_6erQGKHk.jpg",
+     "asset": "g7AO6SA4v7G"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/93094894-6fdd-4473-9234-48a58022c8c0.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf0/Qe5mCLbHml8SWxTGLO-2__OFvV0Ciz.jpg",
+     "asset": "_9xoRHR2nkp"
+    }
+   ]
+  },
+  {
+   "id": "b24",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "Blazing red maple leaves over a temple pond in Kyoto in autumn, a wooden pagoda reflected in the still water. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Blazing red maple leaves over a temple pond in Kyoto in autumn, a wooden pagoda reflected in the still water.",
+   "date": "2025-11-16T10:30",
+   "place": "Eikandō, Kyoto",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Kyoto",
+   "kw": [
+    "maple",
+    "autumn leaves",
+    "temple",
+    "kyoto"
+   ],
+   "node": "nano-banana-2",
+   "run": "wK8qRi5_XD5",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/ebcc524c-f1a6-4ca4-b1b6-9468accf3938.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf1/wTMCELHWBrdxuH78TM2-5_Jth213zz.jpg",
+     "asset": "kYoa2Fb8REG"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/de0ca22a-9e10-46bf-8c24-33cae4631efe.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf1/CI-7UOGvCImtYDW-OgtDP_oQYSCern.jpg",
+     "asset": "mpOz1UwrJk0"
+    }
+   ]
+  },
+  {
+   "id": "b25",
+   "model": "nb2",
+   "n": 1,
+   "ar": "4:3",
+   "refs": [],
+   "prompt": "A bowl of frothy matcha and a seasonal maple-leaf wagashi sweet on a black lacquer tray, a tatami room and garden view softly blurred. Food photograph taken on a smartphone, natural window light, realistic textures, appetizing but unstyled. No text, no watermark, no border.",
+   "scene": "A bowl of frothy matcha and a seasonal maple-leaf wagashi sweet on a black lacquer tray, a tatami room and garden view softly blurred.",
+   "date": "2025-11-16T15:00",
+   "place": "Kyoto",
+   "style": "food",
+   "cam": "phone",
+   "album": "Kyoto",
+   "kw": [
+    "matcha",
+    "tea",
+    "kyoto"
+   ],
+   "node": "nano-banana-2",
+   "run": "Rdxo2uazZra",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/b6506747-7b98-4abc-be20-72fda4a1faa6.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/dCKi1_PKthXsvZ4vpAigq_6pp4EddA.jpg",
+     "asset": "LV18RfyPWwO"
+    }
+   ]
+  },
+  {
+   "id": "b26",
+   "model": "nb2",
+   "n": 1,
+   "ar": "2:3",
+   "refs": [],
+   "prompt": "The Arashiyama bamboo grove in Kyoto, towering green stalks on both sides of a path, early morning light. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "The Arashiyama bamboo grove in Kyoto, towering green stalks on both sides of a path, early morning light.",
+   "date": "2025-11-17T08:00",
+   "place": "Arashiyama, Kyoto",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Kyoto",
+   "kw": [
+    "bamboo",
+    "forest",
+    "kyoto"
+   ],
+   "node": "nano-banana-2",
+   "run": "VDopzI8b_N8",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/6d47dd76-4ca3-446e-af9c-1ec3077bc307.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf1/qjr_hATJeRwPoL7I0QZqy_PoSnYbHY.jpg",
+     "asset": "azPGrSoNa19"
+    }
+   ]
+  },
+  {
+   "id": "b27",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:4",
+   "refs": [
+    "Maya",
+    "Sam"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is Sam (the man)). Create a brand-new, natural photo (not a portrait against a grey wall): A selfie of Maya and Sam on an old stone bridge in Kyoto with red and orange maple trees behind, wearing wool coats and scarves, cheek to cheek. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "A selfie of Maya and Sam on an old stone bridge in Kyoto with red and orange maple trees behind, wearing wool coats and scarves, cheek to cheek.",
+   "date": "2025-11-17T13:40",
+   "place": "Kyoto",
+   "style": "phone",
+   "cam": "phone-front",
+   "album": "Kyoto",
+   "kw": [
+    "selfie",
+    "kyoto"
+   ],
+   "node": "nano-banana-2",
+   "run": "NAWENtJ96KJ",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/b58dc452-8da0-4edf-bdbc-dd2e6421b52e.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf3/-ELg27lfb-B3YCceK0ob5_Gn7Vgr9X.jpg",
+     "asset": "g7AOPiA4v7G"
+    }
+   ]
+  },
+  {
+   "id": "b28",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:4",
+   "refs": [],
+   "prompt": "A wooden museum sign at a temple entrance in Kyoto with a large black-and-white QR code and the printed words 'AUDIO GUIDE' and 'Scan for English', a hand-written note in Japanese beneath. Photographed flat on a table with a smartphone, realistic paper texture, sharp and legible printed text, natural light. No watermark, no border.",
+   "scene": "A wooden museum sign at a temple entrance in Kyoto with a large black-and-white QR code and the printed words 'AUDIO GUIDE' and 'Scan for English', a hand-written note in Japanese beneath.",
+   "date": "2025-11-18T11:00",
+   "place": "Kyoto",
+   "style": "doc",
+   "cam": "phone",
+   "album": "Kyoto",
+   "label": "qr",
+   "kw": [
+    "qr code",
+    "audio guide"
+   ],
+   "text": "AUDIO GUIDE Scan for English",
+   "node": "nano-banana-2",
+   "run": "Yd0OLIR201R",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/1244f28c-87c3-4fbe-a4d8-b75f24f9de62.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf4/sfzEZwmb6So6k9NaPR6Hn_TYaeuUro.jpg",
+     "asset": "_9xvZFR2nkp"
+    }
+   ]
+  },
+  {
+   "id": "b29",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "A Thanksgiving table with a roast turkey, cranberry sauce, green beans, a pumpkin pie and mismatched candles, overhead, warm light. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "A Thanksgiving table with a roast turkey, cranberry sauce, green beans, a pumpkin pie and mismatched candles, overhead, warm light.",
+   "date": "2025-11-27T16:30",
+   "place": "Portland, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "kw": [
+    "thanksgiving",
+    "dinner"
+   ],
+   "node": "nano-banana-2",
+   "run": "bNadgS0RVn0",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/806690e3-69ab-40e2-9e9b-6c807f51da12.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bea/xVHLaRJ1sAAaDfNLtduYD_0FztgJTh.jpg",
+     "asset": "rNOvbheoZ_x"
+    }
+   ]
+  },
+  {
+   "id": "b30",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:4",
+   "refs": [
+    "Sam",
+    "Leo",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Sam (the man), reference 2 is Leo (the boy), reference 3 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Sam lifting Leo up to place a gold star on top of a Christmas tree while June hangs a red ornament on a low branch, the living room lit by tree lights. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Sam lifting Leo up to place a gold star on top of a Christmas tree while June hangs a red ornament on a low branch, the living room lit by tree lights.",
+   "date": "2025-12-14T17:30",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Christmas",
+   "kw": [
+    "christmas tree",
+    "christmas"
+   ],
+   "node": "nano-banana-2",
+   "run": "AArRWInKbyn",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/91386d3f-c0f5-460c-932b-933512751725.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bea/-IAADElu-SF1APRNiD831_dvnpiLZt.jpg",
+     "asset": "xqKyNSOqNYx"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/fc3636ee-0d43-44c1-a2c9-0527a7a3bcd2.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bea/jepuF52Rz_IqeyKfAqqZF_qCGuKUUZ.jpg",
+     "asset": "EPd7PIdbJVm"
+    }
+   ]
+  },
+  {
+   "id": "b31",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Rosa",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Rosa (the grandmother), reference 2 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Rosa and June making Portuguese filhós in a warm kitchen, flour everywhere, June on a step stool sprinkling cinnamon sugar, Rosa laughing. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Rosa and June making Portuguese filhós in a warm kitchen, flour everywhere, June on a step stool sprinkling cinnamon sugar, Rosa laughing.",
+   "date": "2025-12-24T15:00",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Christmas",
+   "kw": [
+    "baking",
+    "christmas",
+    "kitchen"
+   ],
+   "node": "nano-banana-2",
+   "run": "KArzvub5AYb",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/f539fad0-2be4-4def-b762-7b9973c84e3c.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/tmDxxi_YpFYpJrHbiC8nn_sLnQRgev.jpg",
+     "asset": "2A0g2uYqLoP"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/6649e512-15fd-4014-9546-2b28dbc21715.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/oq0F00ra4ESBZpUTNdzRi_mdcyZE4j.jpg",
+     "asset": "7D6gPfN4bgq"
+    }
+   ]
+  },
+  {
+   "id": "b32",
+   "model": "nb2",
+   "n": 1,
+   "ar": "16:9",
+   "refs": [],
+   "prompt": "New Year's fireworks bursting over the Willamette River in Portland, city bridges and skyline lights reflected in the water. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "New Year's fireworks bursting over the Willamette River in Portland, city bridges and skyline lights reflected in the water.",
+   "date": "2025-12-31T23:59",
+   "place": "Portland, Oregon",
+   "style": "land",
+   "cam": "a7c",
+   "kw": [
+    "fireworks",
+    "new year",
+    "city"
+   ],
+   "node": "nano-banana-2",
+   "run": "LArJgsnJVan",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/67d6a923-b37d-4787-8671-567f49ecfce4.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/t4L4k6ESY_yacTshbahat_DDSqDA1t.jpg",
+     "asset": "GP45GTWLnA0"
+    }
+   ]
+  },
+  {
+   "id": "c01",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "Mt. Hood under a deep blue winter sky, snow-laden fir trees in the foreground, fresh powder sparkling. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Mt. Hood under a deep blue winter sky, snow-laden fir trees in the foreground, fresh powder sparkling.",
+   "date": "2026-01-17T11:00",
+   "place": "Mt. Hood, Oregon",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Mt. Hood",
+   "kw": [
+    "mountain",
+    "snow",
+    "winter"
+   ],
+   "node": "nano-banana-2",
+   "run": "OAzNWip9Drp",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/d2242b4c-1ac4-4629-95df-2731840b733a.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/K5Sp3uyNWi982v3qjFcmt_nwOoGUmT.jpg",
+     "asset": "PdLnEiGx_51"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/86e57b46-b924-4236-952c-98f3d6849902.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/HcqIH3E55cOvO2A--IERr_M0pdHkEy.jpg",
+     "asset": "LV1nafyPWwO"
+    }
+   ]
+  },
+  {
+   "id": "c02",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [
+    "Leo",
+    "June",
+    "Sam"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy), reference 2 is June (the little girl), reference 3 is Sam (the man)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo and June on a red sled racing down a snowy hill, Sam running behind after pushing them, snow spraying, everyone in bright snow gear and laughing. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Leo and June on a red sled racing down a snowy hill, Sam running behind after pushing them, snow spraying, everyone in bright snow gear and laughing.",
+   "date": "2026-01-17T13:30",
+   "place": "Mt. Hood, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "album": "Mt. Hood",
+   "kw": [
+    "sledding",
+    "snow"
+   ],
+   "node": "nano-banana-2",
+   "run": "gb84VhDdZ0D",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/cda05048-14a7-4973-bfbb-243ee2c2732b.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/6xkHsq9dgGEWbzXl-G1JR_4BYladB8.jpg",
+     "asset": "opwBzugenaX"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/d69b204b-bdcd-4bd6-8069-871b68324730.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/DsrJYjkr_FrklwGadOQEL_vSbSkguL.jpg",
+     "asset": "5zAORHy_8qV"
+    }
+   ]
+  },
+  {
+   "id": "c03",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:2",
+   "refs": [
+    "Pepper"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Pepper (the border collie)). Create a brand-new, natural photo (not a portrait against a grey wall): Pepper the border collie leaping through deep powder snow, snow flying off her coat, tongue out. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Pepper the border collie leaping through deep powder snow, snow flying off her coat, tongue out.",
+   "date": "2026-01-17T15:00",
+   "place": "Mt. Hood, Oregon",
+   "style": "camera",
+   "cam": "a7c",
+   "album": "Mt. Hood",
+   "kw": [
+    "dog",
+    "snow"
+   ],
+   "node": "nano-banana-2",
+   "run": "AArNrSnKbyn",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/b12d2482-68c5-4857-a75f-d3781310a4af.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/35RxA7CFpHzpqMZTTGxRq_LgZHyvGc.jpg",
+     "asset": "RYP8Eu8Wnvg"
+    }
+   ]
+  },
+  {
+   "id": "c04",
+   "model": "nb2",
+   "n": 1,
+   "ar": "4:3",
+   "refs": [],
+   "prompt": "Inside a cozy wooden cabin: a cast-iron wood stove glowing, four mugs of hot cocoa with marshmallows on a log table, mittens drying on a line. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Inside a cozy wooden cabin: a cast-iron wood stove glowing, four mugs of hot cocoa with marshmallows on a log table, mittens drying on a line.",
+   "date": "2026-01-17T19:00",
+   "place": "Mt. Hood, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "album": "Mt. Hood",
+   "kw": [
+    "cabin",
+    "cocoa",
+    "winter"
+   ],
+   "node": "nano-banana-2",
+   "run": "Yd0NrIR201R",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/e3b89414-c0ee-42bc-ba5f-beb3d162dfe0.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/deXn4DR0hNMEbBWcQVMq1_IUJxfs19.jpg",
+     "asset": "mpO9_fwrJk0"
+    }
+   ]
+  },
+  {
+   "id": "c05",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Leo",
+    "Rosa",
+    "Maya"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy), reference 2 is Rosa (the grandmother), reference 3 is Maya (the woman)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo turning six in a paper crown, leaning over a green dinosaur birthday cake with six candles, Rosa and Maya singing beside him. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Leo turning six in a paper crown, leaning over a green dinosaur birthday cake with six candles, Rosa and Maya singing beside him.",
+   "date": "2026-02-14T17:15",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Birthdays",
+   "kw": [
+    "birthday",
+    "cake",
+    "dinosaur"
+   ],
+   "node": "nano-banana-2",
+   "run": "dOR49fo49Po",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/a5efba2b-0d6a-470d-b92d-b2a7558e12fc.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/CGYA9w9NSnbU6KMsTJtdd_Cgc8oZZx.jpg",
+     "asset": "bJPxzTqXoeP"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/0a6d26c5-d882-4c7e-8531-f9e509ac0408.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/vUwyB9AUmh0nhhx1gSMEH_aUlPF4Rv.jpg",
+     "asset": "6JOBxFgK7vp"
+    }
+   ]
+  },
+  {
+   "id": "c06",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:5",
+   "refs": [],
+   "prompt": "A row of handmade stoneware mugs glazed in deep cobalt blue with white drips on a raw wooden shelf in a ceramics studio, soft side light. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "A row of handmade stoneware mugs glazed in deep cobalt blue with white drips on a raw wooden shelf in a ceramics studio, soft side light.",
+   "date": "2026-03-07T11:00",
+   "place": "Portland, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "kw": [
+    "ceramics",
+    "mugs",
+    "pottery"
+   ],
+   "node": "nano-banana-2",
+   "run": "JXrzGSGvgdG",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/ccd05009-e737-4d7c-be15-9479f2882075.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bec/GVhS1vHxZODLH8SgKw2V8_eCZGLWbd.jpg",
+     "asset": "g7Ay6FA4v7G"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/a7a27ce3-469e-48b8-be7b-fd297a800707.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bec/dEWn-oxRFXbvaqud9W0B8_KYOvP0LL.jpg",
+     "asset": "_9xXRiR2nkp"
+    }
+   ]
+  },
+  {
+   "id": "c07",
+   "model": "nb2",
+   "n": 2,
+   "ar": "2:3",
+   "refs": [
+    "Maya",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Maya lifting June up to touch a branch of pink cherry blossoms along a riverside path, petals drifting, June's hand outstretched. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Maya lifting June up to touch a branch of pink cherry blossoms along a riverside path, petals drifting, June's hand outstretched.",
+   "date": "2026-03-21T10:40",
+   "place": "Waterfront Park, Portland",
+   "style": "camera",
+   "cam": "x100",
+   "kw": [
+    "cherry blossoms",
+    "spring"
+   ],
+   "node": "nano-banana-2",
+   "run": "D4n8whW1b4W",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/5ad0db6a-6538-4d4f-9073-373d9876cdb7.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bec/IL1NiA5sulsKt2w-3NXHC_Sszi8ZgP.jpg",
+     "asset": "8xagRh8B6A2"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/17aeeda6-b109-4dc5-a880-81910e36a20f.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bec/TF5z66j-RILSKWS7fx_pt_xIcm0KwC.jpg",
+     "asset": "bJPXziqXoeP"
+    }
+   ]
+  },
+  {
+   "id": "c08",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Miso",
+    "Pepper"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Miso (the orange tabby cat), reference 2 is Pepper (the border collie)). Create a brand-new, natural photo (not a portrait against a grey wall): Miso the orange tabby cat and Pepper the border collie napping together on a linen sofa, Miso curled against Pepper's side. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Miso the orange tabby cat and Pepper the border collie napping together on a linen sofa, Miso curled against Pepper's side.",
+   "date": "2026-04-12T15:20",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "kw": [
+    "cat",
+    "dog",
+    "nap"
+   ],
+   "node": "nano-banana-2",
+   "run": "0Vk7_IJL0AJ",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/5e8ee12d-d858-45be-9185-311c521882b5.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bee/gaFEP4h81zdhBhbejclZm_dtkq3JNs.jpg",
+     "asset": "nPmJZSDbmpN"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/f1d26528-dffd-4720-89d9-bb4d27769440.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bee/ehK_VgF5s7hysrpGpI1r0_2ORmyHtZ.jpg",
+     "asset": "dxPpJUzm0y5"
+    }
+   ]
+  },
+  {
+   "id": "c09",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:4",
+   "refs": [],
+   "prompt": "A handwritten recipe card on a floured kitchen counter, written in neat blue cursive: title 'Pastéis de Nata — Rosa', then '6 egg yolks', '250 ml milk', '200 g sugar', '1 cinnamon stick', 'lemon peel', '2 tbsp flour', 'puff pastry'. Photographed flat on a table with a smartphone, realistic paper texture, sharp and legible printed text, natural light. No watermark, no border.",
+   "scene": "A handwritten recipe card on a floured kitchen counter, written in neat blue cursive: title 'Pastéis de Nata — Rosa', then '6 egg yolks', '250 ml milk', '200 g sugar', '1 cinnamon stick', 'lemon peel', '2 tbsp flour', 'puff pastry'.",
+   "date": "2026-05-09T13:00",
+   "place": "Portland, Oregon",
+   "style": "doc",
+   "cam": "phone",
+   "label": "documents",
+   "kw": [
+    "recipe",
+    "pastel de nata"
+   ],
+   "text": "Pastéis de Nata — Rosa 6 egg yolks 250 ml milk 200 g sugar 1 cinnamon stick lemon peel 2 tbsp flour puff pastry",
+   "node": "nano-banana-2",
+   "run": "Z7ZBpcxm4Gx",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/ecc50dc6-c40b-4060-87a0-aa425fa05327.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bee/r19LQXhjmBsXsnvUkYp8e_sJgpGsAb.jpg",
+     "asset": "W9PWPf5dZzB"
+    }
+   ]
+  },
+  {
+   "id": "c10",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Rosa",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Rosa (the grandmother), reference 2 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Rosa teaching June how to press puff pastry into small metal tart tins at a kitchen counter, both concentrating, June's tongue poking out. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Rosa teaching June how to press puff pastry into small metal tart tins at a kitchen counter, both concentrating, June's tongue poking out.",
+   "date": "2026-05-09T14:00",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "kw": [
+    "baking",
+    "pastel de nata",
+    "kitchen"
+   ],
+   "node": "nano-banana-2",
+   "run": "e6e8KhmaBwm",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/71a6d113-d8c2-4d6b-ada8-4420d1562f23.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/o3FQ-WMs8HWzFx9zz3Cvo_ArwtDaKR.jpg",
+     "asset": "NV4Y5tB4zbY"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/70eb46de-5f57-49e8-a3f3-04eb85676585.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/KmOJ0cWe6dNK-jk2bvkf3_ZHkalaBu.jpg",
+     "asset": "YVv82UeNbg6"
+    }
+   ]
+  },
+  {
+   "id": "c11",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): June turning three in a yellow dress blowing out three candles on a lemon cake with daisies, balloons and string lights in a backyard. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "June turning three in a yellow dress blowing out three candles on a lemon cake with daisies, balloons and string lights in a backyard.",
+   "date": "2026-06-13T16:30",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Birthdays",
+   "kw": [
+    "birthday",
+    "cake"
+   ],
+   "node": "nano-banana-2",
+   "run": "pb67eH0_pD0",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/58628e51-daf2-44e4-a4a0-105772f1db58.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bee/Cpbv8xZjOA0Gc0t5O9Ypk_2HNKge4f.jpg",
+     "asset": "zN9qKfEA9_R"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/fd2570fe-d5ea-49ab-9c55-f3919255c5e7.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bee/UfvKJ_T77SXZqvrfWZ2pT_gXZNSfcB.jpg",
+     "asset": "JVGbDiV50E7"
+    }
+   ]
+  },
+  {
+   "id": "c12",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:3",
+   "refs": [
+    "Leo",
+    "June",
+    "Pepper"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy), reference 2 is June (the little girl), reference 3 is Pepper (the border collie)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo and June running through a lawn sprinkler in swimsuits with Pepper the border collie chasing the water, golden late-afternoon light, droplets frozen in the air. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Leo and June running through a lawn sprinkler in swimsuits with Pepper the border collie chasing the water, golden late-afternoon light, droplets frozen in the air.",
+   "date": "2026-06-13T17:30",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "kw": [
+    "sprinkler",
+    "summer",
+    "dog"
+   ],
+   "node": "nano-banana-2",
+   "run": "8Br1nfzbo_z",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/fe1b3b76-b5e3-4c1f-9ff4-1be5ae01417a.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/CVwET2Z-32u2S4WPK05Al_qKt7iF8k.jpg",
+     "asset": "ZmVPVtbNzp6"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/2bff2964-1f72-45bf-a4f6-cd50675a44d8.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/pOwiNqPisKyeiUlSR6Gt__Q2cISh4P.jpg",
+     "asset": "ppOkNFKOk1m"
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "model": "nb2",
+   "n": 2,
+   "ar": "16:9",
+   "refs": [],
+   "prompt": "Crater Lake's impossibly deep blue water with Wizard Island, steep caldera walls, a few clouds, summer. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Crater Lake's impossibly deep blue water with Wizard Island, steep caldera walls, a few clouds, summer.",
+   "date": "2026-07-18T12:30",
+   "place": "Crater Lake, Oregon",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Crater Lake",
+   "kw": [
+    "lake",
+    "caldera"
+   ],
+   "node": "nano-banana-2",
+   "run": "6erm5cZzX5Z",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/ff894c72-ae4e-4ea5-8766-a757271102a3.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/GIKQA82IkFjoNXR_1tEm9_ukwzq4p3.jpg",
+     "asset": "BPL6PHDKm2z"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/97442c8d-d76b-4e63-9840-12b32a82b955.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/4DJldXUupWd618Vg08xZi_BZxaG3g9.jpg",
+     "asset": "mpO9JUwrJk0"
+    }
+   ]
+  },
+  {
+   "id": "c14",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:2",
+   "refs": [
+    "Maya",
+    "Sam",
+    "Leo",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is Sam (the man), reference 3 is Leo (the boy), reference 4 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Maya, Sam, Leo and June sitting in camp chairs around a campfire at a forest campsite at night, a tent glowing behind them, string lights in the trees. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Maya, Sam, Leo and June sitting in camp chairs around a campfire at a forest campsite at night, a tent glowing behind them, string lights in the trees.",
+   "date": "2026-07-18T21:40",
+   "place": "Crater Lake, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "album": "Crater Lake",
+   "kw": [
+    "camping",
+    "campfire"
+   ],
+   "node": "nano-banana-2",
+   "run": "XEGN9SVe7JV",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/7d59d6c2-a8c9-4b9b-8024-2dd25c582764.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/mTvZ6UOnYE70Rv3JC5l3n_cgyB3Fjh.jpg",
+     "asset": "yq6o4cde0wL"
+    }
+   ]
+  },
+  {
+   "id": "c14r",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:2",
+   "refs": [
+    "Maya",
+    "Sam",
+    "Leo",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is Sam (the man), reference 3 is Leo (the boy), reference 4 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Exactly four people and no one else: Maya, Sam, Leo (six) and June (three) sitting in four camp chairs in a half circle around a small campfire in a stone fire ring at a forest campsite at night, their feet well back from the fire. A tent glows behind them and string lights hang in the pine trees. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Exactly four people and no one else: Maya, Sam, Leo (six) and June (three) sitting in four camp chairs in a half circle around a small campfire in a stone fire ring at a forest campsite at night, their feet well back from the fire. A tent glows behind them and string lights hang in the pine trees.",
+   "date": "2026-07-18T21:40",
+   "place": "Crater Lake, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "album": "Crater Lake",
+   "kw": [
+    "camping",
+    "campfire"
+   ],
+   "node": "nano-banana-2",
+   "run": "LAr08HnJVan",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/b3c0cff4-dd80-452d-a4ae-29d1286cb2be.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6d79/A2aabYNDhwrTpqtlh4Rug_XCfik6Ul.jpg",
+     "asset": "XA5GRfKXRLk"
+    }
+   ]
+  },
+  {
+   "id": "c15",
+   "model": "nb2",
+   "n": 1,
+   "ar": "2:3",
+   "refs": [],
+   "prompt": "The Milky Way arching over Crater Lake at night, stars reflected in the still water, faint silhouette of the rim. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "The Milky Way arching over Crater Lake at night, stars reflected in the still water, faint silhouette of the rim.",
+   "date": "2026-07-19T00:30",
+   "place": "Crater Lake, Oregon",
+   "style": "land",
+   "cam": "a7c-night",
+   "album": "Crater Lake",
+   "kw": [
+    "milky way",
+    "stars",
+    "night"
+   ],
+   "node": "nano-banana-2",
+   "run": "rw84qFBNpwB",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/aa4265c1-4e58-4b29-8056-129acef612c6.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/do_AERsT-yQOQO6dOemMX_voXUjXtP.jpg",
+     "asset": "g7A56sA4v7G"
+    }
+   ]
+  },
+  {
+   "id": "c16",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [
+    "Leo",
+    "Sam"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy), reference 2 is Sam (the man)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo riding a bike without training wheels for the first time on a park path, wobbling but grinning, Sam running beside him with his hands just let go. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "Leo riding a bike without training wheels for the first time on a park path, wobbling but grinning, Sam running beside him with his hands just let go.",
+   "date": "2026-08-22T18:10",
+   "place": "Portland, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "kw": [
+    "bike",
+    "first time"
+   ],
+   "node": "nano-banana-2",
+   "run": "EerbgCpaY_p",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/635013cd-ddba-4085-b989-2315e43b6b1c.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bed/BJPM6tOqDXyNb64jjinnZ_erQJlQia.jpg",
+     "asset": "V9RXvUEgx0k"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/fee0f1e4-7764-4c89-8a78-0b3db50f616d.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bed/U_MDKON82eiIJS1AACMrf_1VYfjkYl.jpg",
+     "asset": "APODocdRzwW"
+    }
+   ]
+  },
+  {
+   "id": "c17",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:4",
+   "refs": [
+    "Leo",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy), reference 2 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo (six) and June (three) on the front steps holding small chalkboards: Leo's reads 'First day of 1st grade' and June's reads 'First day of preschool'. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Leo (six) and June (three) on the front steps holding small chalkboards: Leo's reads 'First day of 1st grade' and June's reads 'First day of preschool'.",
+   "date": "2026-09-03T07:45",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "School",
+   "kw": [
+    "first day",
+    "school"
+   ],
+   "text": "First day of 1st grade First day of preschool",
+   "node": "nano-banana-2",
+   "run": "ob82Psv6b2v",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/746cdec5-425d-4ba1-8f88-fcf3963ac62e.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bed/5h-qykEZA4OcwuJ1SHRTH_hulgVVav.jpg",
+     "asset": "NV4O5tB4zbY"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/22c2bc48-f7f8-4900-923a-907fd0bb8eb3.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bed/JOlTkLq1jOJ3sjjMA9sqM_ynXl1OOy.jpg",
+     "asset": "YVvX2UeNbg6"
+    }
+   ]
+  },
+  {
+   "id": "c18",
+   "model": "nb2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [
+    "Maya",
+    "June"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Maya (the woman), reference 2 is June (the little girl)). Create a brand-new, natural photo (not a portrait against a grey wall): June on Maya's hip reaching for a red apple in an orchard, autumn trees heavy with fruit, snowy Mt. Hood in the distance. Photographed on a mirrorless camera with a 35mm lens, natural light, gentle film-like color, realistic textures, shallow depth of field. No text, no watermark, no border.",
+   "scene": "June on Maya's hip reaching for a red apple in an orchard, autumn trees heavy with fruit, snowy Mt. Hood in the distance.",
+   "date": "2026-10-10T11:30",
+   "place": "Hood River, Oregon",
+   "style": "camera",
+   "cam": "x100",
+   "album": "Hood River",
+   "kw": [
+    "apple picking",
+    "orchard",
+    "autumn"
+   ],
+   "node": "nano-banana-2",
+   "run": "G0rwYskg4Pk",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/9d3cd82e-9ae5-44be-bf92-6d1384d31a71.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bee/ZrNOg6hgDTaI6k1EVgzkn_lFSkozFn.jpg",
+     "asset": "XA5zyiKXRLk"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/baf3a3c3-ea27-4704-8459-0583aecb4a2a.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bee/bTAg4_qBqwZqSiOCAt4f8_d8VEd9an.jpg",
+     "asset": "rNO2bFeoZ_x"
+    }
+   ]
+  },
+  {
+   "id": "c19",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "Rows of apple trees and stacked wooden crates of red apples in a Hood River orchard, Mt. Hood glowing white in the distance. Landscape photograph on a full-frame camera, natural light, rich but realistic color, crisp detail. No text, no watermark, no border.",
+   "scene": "Rows of apple trees and stacked wooden crates of red apples in a Hood River orchard, Mt. Hood glowing white in the distance.",
+   "date": "2026-10-10T12:00",
+   "place": "Hood River, Oregon",
+   "style": "land",
+   "cam": "a7c",
+   "album": "Hood River",
+   "kw": [
+    "orchard",
+    "apples"
+   ],
+   "node": "nano-banana-2",
+   "run": "6erpaUZzX5Z",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/47f724e4-4b7b-4ab3-adab-0886e0f2bf44.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf1/hTeTORtQiqK5zDzsoQBp-_seBZyg7T.jpg",
+     "asset": "6JO5xFgK7vp"
+    }
+   ]
+  },
+  {
+   "id": "c20",
+   "model": "nb2",
+   "n": 1,
+   "ar": "4:3",
+   "refs": [
+    "Leo",
+    "Sam"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Leo (the boy), reference 2 is Sam (the man)). Create a brand-new, natural photo (not a portrait against a grey wall): Leo taking a huge bite out of a giant red apple, juice on his chin, Sam laughing behind him in an orchard. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Leo taking a huge bite out of a giant red apple, juice on his chin, Sam laughing behind him in an orchard.",
+   "date": "2026-10-10T12:20",
+   "place": "Hood River, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Hood River",
+   "kw": [
+    "apple",
+    "orchard"
+   ],
+   "node": "nano-banana-2",
+   "run": "AAryWinKbyn",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/f173040e-e100-423d-9b6d-27c4c49b7884.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf1/52EZr0RwRIS_IWZ_tQgXJ_Be0u3vtI.jpg",
+     "asset": "1AKxYiNJWO6"
+    }
+   ]
+  },
+  {
+   "id": "c21",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:4",
+   "refs": [],
+   "prompt": "A farm stand receipt on a wooden crate: header 'GORGE VIEW ORCHARD — Hood River, OR', lines 'Honeycrisp 10 lb  $24.00', 'Apple cider 1/2 gal  $9.00', 'Cider donuts (6)  $8.50', 'TOTAL  $41.50', 'Thank you! See you next fall'. Photographed flat on a table with a smartphone, realistic paper texture, sharp and legible printed text, natural light. No watermark, no border.",
+   "scene": "A farm stand receipt on a wooden crate: header 'GORGE VIEW ORCHARD — Hood River, OR', lines 'Honeycrisp 10 lb  $24.00', 'Apple cider 1/2 gal  $9.00', 'Cider donuts (6)  $8.50', 'TOTAL  $41.50', 'Thank you! See you next fall'.",
+   "date": "2026-10-10T13:15",
+   "place": "Hood River, Oregon",
+   "style": "doc",
+   "cam": "phone",
+   "album": "Hood River",
+   "label": "receipts",
+   "kw": [
+    "receipt"
+   ],
+   "text": "GORGE VIEW ORCHARD Hood River, OR Honeycrisp 10 lb $24.00 Apple cider 1/2 gal $9.00 Cider donuts (6) $8.50 TOTAL $41.50 Thank you! See you next fall",
+   "node": "nano-banana-2",
+   "run": "KArJvHb5AYb",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4fb439c0-6f94-4e20-bcfe-e8b3ca479c21.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf1/JsWrKPuM5nYrbhWN8wPG9_jSNfyaqg.jpg",
+     "asset": "RYP6Wf8Wnvg"
+    }
+   ]
+  },
+  {
+   "id": "c22",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:4",
+   "refs": [
+    "Miso"
+   ],
+   "prompt": "Use the reference photos only for the identity and appearance of the people and pets in them (reference 1 is Miso (the orange tabby cat)). Create a brand-new, natural photo (not a portrait against a grey wall): Miso the orange tabby cat sniffing a freshly carved jack-o'-lantern on a porch step, autumn leaves around, dusk. Candid snapshot taken on a smartphone, natural light, true-to-life color, realistic skin, fur and fabric texture, slightly imperfect framing. No text, no watermark, no border.",
+   "scene": "Miso the orange tabby cat sniffing a freshly carved jack-o'-lantern on a porch step, autumn leaves around, dusk.",
+   "date": "2026-10-10T18:40",
+   "place": "Portland, Oregon",
+   "style": "phone",
+   "cam": "phone",
+   "album": "Autumn",
+   "kw": [
+    "cat",
+    "pumpkin",
+    "halloween"
+   ],
+   "node": "nano-banana-2",
+   "run": "PAJ7eSbVPLb",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/1ab3208f-128a-492a-a5d6-fe70ac221f35.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bf2/za8tvoi3mlDXjp-LXuqgZ_MIhuXL7R.jpg",
+     "asset": "eEPq2CNx8z9"
+    }
+   ]
+  },
+  {
+   "id": "d01",
+   "model": "nb2",
+   "n": 1,
+   "ar": "4:5",
+   "refs": [],
+   "prompt": "Character design portrait of Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches. Three-quarter view, confident half smile, cinematic rim light, dark teal studio backdrop, highly detailed, photorealistic.",
+   "scene": "Character design portrait of Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches. Three-quarter view, confident half smile, cinematic rim light, dark teal studio backdrop, highly detailed, photorealistic.",
+   "date": "2025-03-02T21:10",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "character": "Nova",
+   "node": "nano-banana-2",
+   "run": "kb8dbtY2onY",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4f0dc32b-7f1b-446c-83c2-eb4f1fa77896.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/oM344MXxtCn0l0AIiXwx6_tvvXGel8.jpg",
+     "asset": "4WpY0HeZmk0"
+    }
+   ]
+  },
+  {
+   "id": "d02",
+   "model": "nb2",
+   "n": 1,
+   "ar": "16:9",
+   "refs": [],
+   "prompt": "Cinematic still of the same character as the reference image (Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches), standing on a ridge of red Martian dunes at dusk beside a six-wheeled rover, two small moons in a butterscotch sky, wide cinematic shot. Keep her face, hair and suit identical to the reference.",
+   "scene": "Cinematic still of the same character as the reference image (Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches), standing on a ridge of red Martian dunes at dusk beside a six-wheeled rover, two small moons in a butterscotch sky, wide cinematic shot. Keep her face, hair and suit identical to the reference.",
+   "date": "2025-03-02T21:40",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "character": "Nova",
+   "ref_from": "d01",
+   "node": "nano-banana-2",
+   "run": "NAWxNhJ96KJ",
+   "ref_url": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4f0dc32b-7f1b-446c-83c2-eb4f1fa77896.jpg",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/cca20747-9a8b-4aac-97d6-fedc1defb5fc.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/5lrhAusxfiYVFMbQBzNJ-_v5O0LtjC.jpg",
+     "asset": "0AdgZFNpWre"
+    }
+   ]
+  },
+  {
+   "id": "d03",
+   "model": "nb2",
+   "n": 1,
+   "ar": "2:3",
+   "refs": [],
+   "prompt": "Cinematic still of the same character as the reference image (Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches), walking through a rain-soaked neon night market alley, paper lanterns and holographic signs reflecting in puddles, cinematic. Keep her face, hair and suit identical to the reference.",
+   "scene": "Cinematic still of the same character as the reference image (Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches), walking through a rain-soaked neon night market alley, paper lanterns and holographic signs reflecting in puddles, cinematic. Keep her face, hair and suit identical to the reference.",
+   "date": "2025-05-24T22:05",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "character": "Nova",
+   "ref_from": "d01",
+   "node": "nano-banana-2",
+   "run": "4VR5gtgJw5g",
+   "ref_url": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4f0dc32b-7f1b-446c-83c2-eb4f1fa77896.jpg",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/883b132e-eac3-44ee-adfd-5804cf99ead7.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6beb/ortIHmKCehAG3cB-QlTg3_dtbfiK0y.jpg",
+     "asset": "q9PyySx4D1W"
+    }
+   ]
+  },
+  {
+   "id": "d04",
+   "model": "nb2",
+   "n": 1,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "Cinematic still of the same character as the reference image (Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches), looking out of the round window of an underwater research station as a humpback whale glides past in blue light. Keep her face, hair and suit identical to the reference.",
+   "scene": "Cinematic still of the same character as the reference image (Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches), looking out of the round window of an underwater research station as a humpback whale glides past in blue light. Keep her face, hair and suit identical to the reference.",
+   "date": "2025-08-30T20:30",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "character": "Nova",
+   "ref_from": "d01",
+   "node": "nano-banana-2",
+   "run": "nX8dWTEkwoE",
+   "ref_url": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4f0dc32b-7f1b-446c-83c2-eb4f1fa77896.jpg",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/e17b8bee-dde0-45ad-b5ad-587786ef85c2.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bec/1brmYD4ZHnoE5ChKfRqDB_SldO03iY.jpg",
+     "asset": "azPXESoNa19"
+    }
+   ]
+  },
+  {
+   "id": "d05",
+   "model": "nb2",
+   "n": 1,
+   "ar": "4:5",
+   "refs": [],
+   "prompt": "Cinematic still of the same character as the reference image (Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches), tending tomato vines in a lush greenhouse module aboard a space station, Earth visible through the curved glass. Keep her face, hair and suit identical to the reference.",
+   "scene": "Cinematic still of the same character as the reference image (Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches), tending tomato vines in a lush greenhouse module aboard a space station, Earth visible through the curved glass. Keep her face, hair and suit identical to the reference.",
+   "date": "2025-12-06T19:50",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "character": "Nova",
+   "ref_from": "d01",
+   "node": "nano-banana-2",
+   "run": "dOR8zfo49Po",
+   "ref_url": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4f0dc32b-7f1b-446c-83c2-eb4f1fa77896.jpg",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/7b918201-6e44-493a-89d2-a852d78e9846.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bec/qGC32B3pwOI2E1SI3EMPB_dA3itUam.jpg",
+     "asset": "1AKgzCNJWO6"
+    }
+   ]
+  },
+  {
+   "id": "d06",
+   "model": "nb2",
+   "n": 1,
+   "ar": "16:9",
+   "refs": [],
+   "prompt": "Cinematic still of the same character as the reference image (Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches), riding a vintage cafe-racer motorcycle across white salt flats at sunrise, long shadow, motion blur. Keep her face, hair and suit identical to the reference.",
+   "scene": "Cinematic still of the same character as the reference image (Nova, an explorer in her thirties with a sleek silver bob haircut, warm brown skin and freckles, wearing a burnt-orange retro-futurist flight suit with round mission patches), riding a vintage cafe-racer motorcycle across white salt flats at sunrise, long shadow, motion blur. Keep her face, hair and suit identical to the reference.",
+   "date": "2026-04-25T21:15",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "character": "Nova",
+   "ref_from": "d01",
+   "node": "nano-banana-2",
+   "run": "Wx5qVS7Xmx7",
+   "ref_url": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4f0dc32b-7f1b-446c-83c2-eb4f1fa77896.jpg",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/1c395884-4568-441d-8a2b-d8c5b24031ac.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bec/R5sU_09S07t_y-uN0-nad_DDAvG3Ar.jpg",
+     "asset": "RYPX7f8Wnvg"
+    }
+   ]
+  },
+  {
+   "id": "d07",
+   "model": "flux2",
+   "n": 2,
+   "ar": "3:4",
+   "refs": [],
+   "prompt": "Art nouveau travel poster for Lisbon: a yellow tram climbing a hill past pastel houses toward the river, ornate flowing border with lilies, the word 'LISBOA' in elegant hand-drawn lettering at the top, muted gold, teal and coral palette.",
+   "scene": "Art nouveau travel poster for Lisbon: a yellow tram climbing a hill past pastel houses toward the river, ornate flowing border with lilies, the word 'LISBOA' in elegant hand-drawn lettering at the top, muted gold, teal and coral palette.",
+   "date": "2025-06-21T22:30",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "node": "flux-2",
+   "run": "RdxN2cazZra",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4e46ea70-ad30-4d3a-8394-ac8c20b18962.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/tR7e6UYQvVUPPVa2VtTpq_PFRQbeFz.jpg",
+     "asset": "nPmV5sDbmpN"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/35fabec5-19bf-488e-8ce0-fc0df04de674.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/LQbz2pPrPfbBAchdZIUyv_lEvXbV0W.jpg",
+     "asset": "W9P_wf5dZzB"
+    }
+   ]
+  },
+  {
+   "id": "d08",
+   "model": "flux2",
+   "n": 3,
+   "ar": "1:1",
+   "refs": [],
+   "prompt": "Macro photograph of a dew-covered glass terrarium on a windowsill, inside it a tiny swirling galaxy floats above moss and pebbles, soft bokeh, morning light.",
+   "scene": "Macro photograph of a dew-covered glass terrarium on a windowsill, inside it a tiny swirling galaxy floats above moss and pebbles, soft bokeh, morning light.",
+   "date": "2025-09-13T23:00",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "node": "flux-2",
+   "run": "e6e4KImaBwm",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/e71f50cd-8cce-47a1-a48a-3e8c8071a57b.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/YXH2ZTjYUQjFIHcOTZe6k_jsEvpuXL.jpg",
+     "asset": "DP5YqHmZ_ON"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/40c57b5a-74dd-4a8f-abbe-953983ff1966.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/Fe-dV1ux5MK4MwMAg3VEf_0BIIEyOW.jpg",
+     "asset": "xqKV5SOqNYx"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/d8d88ecd-8239-4cef-a878-fc34fcbf8382.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/i27pT8xFlcYK7N0MIWTH3_rI9vy4ak.jpg",
+     "asset": "EPdn5fdbJVm"
+    }
+   ]
+  },
+  {
+   "id": "d09",
+   "model": "grok2",
+   "n": 2,
+   "ar": "3:2",
+   "refs": [],
+   "prompt": "Loose watercolor painting of a red-and-white lighthouse on a sea cliff in a storm, crashing waves, visible cold-press paper texture, bleeding pigments, white space.",
+   "scene": "Loose watercolor painting of a red-and-white lighthouse on a sea cliff in a storm, crashing waves, visible cold-press paper texture, bleeding pigments, white space.",
+   "date": "2025-10-04T22:00",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "node": "grok-imagine-20",
+   "run": "_OB4VCad4oa",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/2e066117-788c-48f4-9852-eb0804b9b67f.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/k1MROIfsdE9ksVEPQ7Ehb_ZfpoADdR.jpg",
+     "asset": "GP4XkuWLnA0"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/04ab3d8a-c355-4145-b819-8efe2febe88c.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/Wjyf_gpAv3igXL9DNon4k_qCfk2ARL.jpg",
+     "asset": "0Ad0ruNpWre"
+    }
+   ]
+  },
+  {
+   "id": "d10",
+   "model": "nb2",
+   "n": 2,
+   "ar": "1:1",
+   "refs": [],
+   "prompt": "Isometric 3D diorama of a tiny Portuguese bakery at dawn on a floating cube of cobblestone street, warm glowing windows, trays of custard tarts, a miniature baker, blue azulejo tiles, soft clay render, pastel palette.",
+   "scene": "Isometric 3D diorama of a tiny Portuguese bakery at dawn on a floating cube of cobblestone street, warm glowing windows, trays of custard tarts, a miniature baker, blue azulejo tiles, soft clay render, pastel palette.",
+   "date": "2026-01-31T20:40",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "node": "nano-banana-2",
+   "run": "wK847f5_XD5",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/94d1341d-3099-483a-8bd7-53504284f247.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/cGluUHki2MMjsCpK0CvB3_BtUmqHlU.jpg",
+     "asset": "OV78AiJk2Y_"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4070bc98-0073-4b01-a7aa-e84bc5a60679.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be7/pZLMyCiHrG2plnohZSTV-_UJzbvLra.jpg",
+     "asset": "kYopOtb8REG"
+    }
+   ]
+  },
+  {
+   "id": "d11",
+   "model": "grok2",
+   "n": 2,
+   "ar": "16:9",
+   "refs": [],
+   "prompt": "Hand-painted animation background of a cliffside fishing village at golden hour, laundry lines between whitewashed houses, cats on terracotta roofs, boats in a turquoise cove, painterly, whimsical, no characters in front.",
+   "scene": "Hand-painted animation background of a cliffside fishing village at golden hour, laundry lines between whitewashed houses, cats on terracotta roofs, boats in a turquoise cove, painterly, whimsical, no characters in front.",
+   "date": "2026-02-21T22:15",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "node": "grok-imagine-20",
+   "run": "PAJNqtbVPLb",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/6dee144e-35bc-45f5-acf0-a63cae6c011c.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/r6n8SJN_9mWW8MSGNDSrb_qatHxNSS.jpg",
+     "asset": "eEP7kINx8z9"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/4781cab2-fea1-40cc-a7b2-fc7f87b88260.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/IUd7DeMwtfMVfMFYtNR0__cmYKtxIl.jpg",
+     "asset": "yq6oXude0wL"
+    }
+   ]
+  },
+  {
+   "id": "d12",
+   "model": "flux2",
+   "n": 2,
+   "ar": "16:9",
+   "refs": [],
+   "prompt": "Cinematic still of a red fox standing in a snowy birch forest at blue hour, soft falling snow, 85mm lens, shallow depth of field, quiet and cold.",
+   "scene": "Cinematic still of a red fox standing in a snowy birch forest at blue hour, soft falling snow, 85mm lens, shallow depth of field, quiet and cold.",
+   "date": "2026-03-14T23:30",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "node": "flux-2",
+   "run": "zbw4PfvnqZv",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/b6fecde4-a4ee-4e8c-8789-e5b08dc181d1.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/zNwKhdoMER5-eZmC0uiFb_eV3p6EMk.jpg",
+     "asset": "wNa2ki7O2Z1"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/8caab455-a5af-4af5-b1ac-74273b5d20b6.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be9/T7YeSWeKkuCfSx2SYmKPJ_ID8qG1xc.jpg",
+     "asset": "V9R8vfEgx0k"
+    }
+   ]
+  },
+  {
+   "id": "d13",
+   "model": "nb2",
+   "n": 2,
+   "ar": "4:5",
+   "refs": [],
+   "prompt": "Product photograph of a handmade stoneware mug glazed in deep cobalt blue with a white drip glaze, on a travertine block, soft shadows, warm beige background, minimal.",
+   "scene": "Product photograph of a handmade stoneware mug glazed in deep cobalt blue with a white drip glaze, on a travertine block, soft shadows, warm beige background, minimal.",
+   "date": "2026-05-30T21:00",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "node": "nano-banana-2",
+   "run": "zbwBnfvnqZv",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/0bf6d575-6569-4a9f-ae21-49b116544363.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bec/TKDZNmRSbOUu48-ZDwS-K_2VWmzrfo.jpg",
+     "asset": "eEPXLuNx8z9"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/62ed4261-04a0-4751-93ac-8e09043afa34.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bec/_rNtLe92ybmJnYIGgXuhW_bNrvgbeU.jpg",
+     "asset": "yq6P4Ide0wL"
+    }
+   ]
+  },
+  {
+   "id": "d14",
+   "model": "grok2",
+   "n": 2,
+   "ar": "2:3",
+   "refs": [],
+   "prompt": "Retro science-fiction paperback cover illustration: a lone astronaut on a rocky moon looking up at a giant ringed planet, bold 1970s palette of orange, teal and cream, airbrushed gradients, no text.",
+   "scene": "Retro science-fiction paperback cover illustration: a lone astronaut on a rocky moon looking up at a giant ringed planet, bold 1970s palette of orange, teal and cream, airbrushed gradients, no text.",
+   "date": "2026-08-08T22:45",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "node": "grok-imagine-20",
+   "run": "7BrayfdW9Zd",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/7d2d4c4e-bec0-4e19-ab7a-d20eb79939d6.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/UbldmTEezRdjpSE6i-cTv_X5XvVyWu.jpg",
+     "asset": "APO6oidRzwW"
+    },
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/f3df03c3-ca4c-48f1-aea1-4d66570b94eb.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6be8/-k-zCrBBu8q9Tzka58Bze_PY5J42uN.jpg",
+     "asset": "KVw8yHOKxD9"
+    }
+   ]
+  },
+  {
+   "id": "d15",
+   "model": "flux2",
+   "n": 1,
+   "ar": "4:3",
+   "refs": [],
+   "prompt": "Editorial overhead flat-lay of a vintage film camera, folded paper maps of Portugal, a passport, a pastel de nata and an espresso on a linen tablecloth, soft daylight.",
+   "scene": "Editorial overhead flat-lay of a vintage film camera, folded paper maps of Portugal, a passport, a pastel de nata and an espresso on a linen tablecloth, soft daylight.",
+   "date": "2026-09-19T20:20",
+   "place": "",
+   "style": "art",
+   "ai": true,
+   "node": "flux-2",
+   "run": "5BeGKU2neW2",
+   "images": [
+    {
+     "src": "https://cdn.mitte.ai/mitte-prod/u/A1w0C9Bnrn/image/c99291de-965e-4e74-995d-a72385861fb7.jpg",
+     "fal": "https://v3b.fal.media/files/b/0aaf6bea/iDMqgETzUKwUAR6QCIdFs_C0Iua77s.jpg",
+     "asset": "PdL84TGx_51"
+    }
+   ]
+  }
+ ]
+}

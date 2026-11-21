@@ -1,0 +1,112 @@
+/* The capture button on CivitAI, Instagram, TikTok and Pinterest: X's button (tweet-ui.css), sized
+   to sit among each site's own action buttons, or over the corner of a picture in a grid. */
+div.psc-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Over a picture (CivitAI and Pinterest grids): a dark round chip, readable on any image. */
+div.psc-overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 20;
+}
+div.psc-overlay button.imtc-forensic-btn {
+  color: #fff;
+  background: rgba(15, 17, 20, 0.62);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+div.psc-overlay button.imtc-forensic-btn:hover {
+  color: #f59e0b;
+  background: rgba(15, 17, 20, 0.8);
+}
+div.psc-overlay button.imtc-forensic-btn.imtc-saved,
+div.psc-overlay button.imtc-forensic-btn.imtc-saved:hover {
+  color: #3ddc97;
+  background: rgba(15, 17, 20, 0.8);
+}
+/* Pinterest shows its own buttons over a pin only while it's hovered; so does ours, unless saved. */
+div.psc-pinterest.psc-card {
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+:hover > div.psc-pinterest.psc-card,
+div.psc-pinterest.psc-card:focus-within,
+div.psc-pinterest.psc-card:has(.imtc-saved),
+div.psc-pinterest.psc-card:has(.imtc-loading) {
+  opacity: 1;
+}
+
+/* CivitAI's image page: its round 36px toolbar buttons. */
+div.psc-civitai.psc-toolbar button.imtc-forensic-btn {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  max-width: 36px;
+  color: #fff;
+  background: var(--mantine-color-gray-filled, #3b3d42);
+}
+div.psc-civitai.psc-toolbar button.imtc-forensic-btn:hover { color: #f59e0b; }
+div.psc-civitai.psc-toolbar button.imtc-forensic-btn.imtc-saved { color: #3ddc97; }
+
+/* Instagram: its 24px icons in 40px targets, in the theme's text colour. */
+div.psc-instagram.psc-bar button.imtc-forensic-btn {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  color: inherit;
+}
+div.psc-instagram .imtc-btn-icon,
+div.psc-instagram button.imtc-forensic-btn svg.imtc-logo {
+  width: 24px;
+  height: 24px;
+}
+
+/* TikTok: the 48px round buttons of the action column. */
+div.psc-tiktok.psc-column {
+  margin: 8px 0;
+}
+div.psc-tiktok.psc-column button.imtc-forensic-btn {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 48px;
+  color: inherit;
+  background: rgba(128, 128, 128, 0.18);
+}
+div.psc-tiktok .imtc-btn-icon,
+div.psc-tiktok button.imtc-forensic-btn svg.imtc-logo {
+  width: 24px;
+  height: 24px;
+}
+
+/* Pinterest's pin page: its 48px round buttons. */
+div.psc-pinterest.psc-bar button.imtc-forensic-btn {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 48px;
+  color: inherit;
+}
+div.psc-pinterest.psc-bar .imtc-btn-icon,
+div.psc-pinterest.psc-bar button.imtc-forensic-btn svg.imtc-logo {
+  width: 24px;
+  height: 24px;
+}
+div.psc-pinterest.psc-bar button.imtc-forensic-btn:hover { background: rgba(128, 128, 128, 0.15); }
+
+/* The saved check, a little larger with the larger icons. */
+div.psc-instagram .imtc-saved-badge,
+div.psc-tiktok .imtc-saved-badge,
+div.psc-pinterest.psc-bar .imtc-saved-badge {
+  width: 12px;
+  height: 12px;
+}
+div.psc-slot button.imtc-forensic-btn svg.imtc-saved-check {
+  width: 8px;
+  height: 8px;
+}

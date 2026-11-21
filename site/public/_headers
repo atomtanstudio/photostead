@@ -1,0 +1,22 @@
+# Headers for every response from photostead.com (Cloudflare Workers static assets).
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'
+
+# Files whose address changes when they do: keep them a year.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/demo/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# The demo library's pictures change only when the library is rebuilt.
+/demo/media/*
+  Cache-Control: public, max-age=2592000
+/img/*
+  Cache-Control: public, max-age=604800

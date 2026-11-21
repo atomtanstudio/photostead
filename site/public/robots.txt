@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://photostead.com/sitemap.xml

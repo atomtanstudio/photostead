@@ -1,0 +1,28 @@
+[project]
+name = "photostead-worker"
+version = "0.1.0"
+description = "Photostead's AI worker: search embeddings (SigLIP 2), faces (YuNet + AuraFace) and text in pictures, on CPU or GPU, pulling work from a Photostead server"
+license = "AGPL-3.0-only"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "pillow>=11.0",
+  "tokenizers>=0.21",
+  "rapidocr>=3.4",
+  "opencv-python-headless>=4.10",  # YuNet face detection (FaceDetectorYN); RapidOCR needs it too
+]
+
+# ONNX Runtime's CPU and GPU builds can't be installed together: pick one.
+[project.optional-dependencies]
+cpu = ["onnxruntime>=1.20"]
+gpu = ["onnxruntime-gpu[cuda,cudnn]>=1.20"]
+
+[project.scripts]
+photostead-worker = "photostead_worker.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["photostead_worker"]

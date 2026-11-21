@@ -1,0 +1,126 @@
+# Checks every push to main and every pull request: the server (format, vet, generated SQL, tests
+# against Postgres with pgvector), the web app (types, tests, build), the AI worker (it compiles),
+# Photostead Capture's tests, and, on pull requests, breaking changes to the API.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  server:
+    runs-on: ubuntu-24.04
+    services:
+      postgres:
+        image: pgvector/pgvector:pg18
+        env:
+          POSTGRES_USER: photostead
+          POSTGRES_PASSWORD: photostead
+          POSTGRES_DB: photostead
+        ports: ["5432:5432"]
+        options: >-
+          --shm-size=512m
+          --health-cmd "pg_isready -U photostead"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      PHOTOSTEAD_DATABASE_URL: postgres://photostead:photostead@localhost:5432/photostead?sslmode=disable
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: server/go.mod
+          cache-dependency-path: server/go.sum
+      - name: Install libvips (with HEIC's HEVC decoder), exiftool, ffmpeg and Postgres 18's pg_dump
+        run: |
+          # pg_dump must be as new as the server (18); Ubuntu's is 16, so it comes from apt.postgresql.org.
+          sudo install -d /usr/share/postgresql-common/pgdg
+          sudo curl -fsSL -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc https://www.postgresql.org/media/keys/ACCC4CF8.asc
+          echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libvips-dev pkg-config libheif-plugin-libde265 libimage-exiftool-perl ffmpeg postgresql-client-18
+          echo /usr/lib/postgresql/18/bin >> "$GITHUB_PATH"
+      - name: Format
+        run: test -z "$(gofmt -l .)" || { gofmt -l .; exit 1; }
+      - name: Vet
+        run: go vet ./...
+      - uses: sqlc-dev/setup-sqlc@v5
+        with:
+          sqlc-version: "1.31.1"
+      - name: Generated SQL code matches the queries
+        run: sqlc diff
+      - name: Test
+        run: go test ./...
+      - name: Build
+        run: go build -o /tmp/photostead ./cmd/photostead
+
+  api:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: server/go.mod
+          cache-dependency-path: server/go.sum
+      - name: Install libvips
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libvips-dev pkg-config
+      - name: The API document, before and after
+        run: |
+          (cd server && go run ./cmd/photostead openapi) > /tmp/head.json
+          git worktree add /tmp/base "origin/${{ github.base_ref }}"
+          (cd /tmp/base/server && go run ./cmd/photostead openapi) > /tmp/base.json
+      - name: No breaking changes
+        run: go run github.com/oasdiff/oasdiff@v1.34.1 breaking /tmp/base.json /tmp/head.json --fail-on ERR
+
+  web:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+  worker:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Install
+        run: pip install "./worker[cpu]"
+      - name: Compiles and imports
+        run: |
+          python -m compileall -q worker/photostead_worker
+          python -c "import photostead_worker.runner, photostead_worker.client, photostead_worker.models"
+
+  capture:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - run: node --test 'capture/tests/*.test.mjs'

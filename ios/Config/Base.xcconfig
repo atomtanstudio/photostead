@@ -1,0 +1,11 @@
+// Settings for every build. Your own signing team goes in Local.xcconfig next to this file
+// (DEVELOPMENT_TEAM = …), which isn't in git, so regenerating the project keeps it.
+// Where iOS's background uploads go (the upload extension's BackgroundUploadURLBase): iOS may
+// insist on this one address. Set your server's own in Local.xcconfig.
+PHOTOSTEAD_UPLOAD_URL_BASE = https:/$()/photostead.com
+
+#include? "Local.xcconfig"
+
+// Store and TestFlight builds (Release) always declare the public default, whatever Local.xcconfig
+// says: a personal server's address must never ship inside the app.
+PHOTOSTEAD_UPLOAD_URL_BASE[config=Release] = https:/$()/photostead.com

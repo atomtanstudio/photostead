@@ -1,0 +1,23 @@
+{
+  "name": "photostead-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "photostead.com: the landing page, the App Store pages and the demo, served as static files by Cloudflare Workers.",
+  "scripts": {
+    "library": "node demo-library/build.mjs",
+    "load": "node demo-library/load.mjs",
+    "towns": "node demo-library/towns.mjs",
+    "build": "node build.mjs",
+    "screens": "node scripts/screens.mjs",
+    "preview": "wrangler dev",
+    "deploy": "node build.mjs && wrangler deploy && wrangler deploy --config www/wrangler.jsonc",
+    "release": "npm run library && npm run build && npm run screens && wrangler deploy && wrangler deploy --config www/wrangler.jsonc"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1",
+    "sharp": "^0.34.4",
+    "thumbhash": "^0.1.1",
+    "wrangler": "^4.42.0"
+  }
+}

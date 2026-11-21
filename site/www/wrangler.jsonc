@@ -1,0 +1,13 @@
+// www.photostead.com on Cloudflare Workers: a few lines (www.js) that send each visit to the same
+// address on photostead.com. Attaching the domain makes its DNS record. Published with the site:
+//
+//   wrangler deploy --config www/wrangler.jsonc
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "photostead-www",
+  "main": "www.js",
+  "compatibility_date": "2026-10-01",
+  "routes": [{ "pattern": "www.photostead.com", "custom_domain": true }],
+  "workers_dev": false,
+  "observability": { "enabled": false }
+}

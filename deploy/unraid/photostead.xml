@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>photostead</Name>
+  <Repository>photostead:dev</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://photostead.com</Support>
+  <Project>https://photostead.com</Project>
+  <Overview>Photostead: a self-hosted photo and video library. One container: the server, the web app and its database. Existing folders are mounted read-only and indexed in place.</Overview>
+  <Category>MediaApp:Photos MediaServer:Photos</Category>
+  <WebUI>http://[IP]:[PORT:4800]/</WebUI>
+  <Icon/>
+  <ExtraParams>--stop-timeout 60 --shm-size=1g</ExtraParams>
+  <DateInstalled/>
+  <Config Name="Web UI" Target="4800" Default="4800" Mode="tcp" Description="Photostead web app and API" Type="Port" Display="always" Required="true" Mask="false">4800</Config>
+  <Config Name="App data" Target="/data" Default="/mnt/user/appdata/photostead" Mode="rw" Description="Database, thumbnails and previews (cache pool)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/photostead</Config>
+  <Config Name="Photo library" Target="/photos" Default="/mnt/user/photostead" Mode="rw" Description="The photostead share (Primary: cache, Secondary: array, Mover: cache to array). Originals live here." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/photostead</Config>
+  <Config Name="Photo library, array only" Target="/photos-array" Default="/mnt/user0/photostead" Mode="rw" Description="The same share seen without the cache, for large migrations that would overflow the cache pool" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user0/photostead</Config>
+  <Config Name="PHOTOSTEAD_MANAGED_ROOT" Target="PHOTOSTEAD_MANAGED_ROOT" Default="/photos" Mode="" Description="Where the app reads the photo library" Type="Variable" Display="advanced" Required="false" Mask="false">/photos</Config>
+  <Config Name="PHOTOSTEAD_MOVE_TARGET" Target="PHOTOSTEAD_MOVE_TARGET" Default="/photos-array" Mode="" Description="Where migrations write (array only)" Type="Variable" Display="advanced" Required="false" Mask="false">/photos-array</Config>
+  <Config Name="Library: images (read-only)" Target="/libraries/images" Default="" Mode="ro" Description="Existing folder indexed in place during migration" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/storage/images</Config>
+  <Config Name="Library: videos (read-only)" Target="/libraries/videos" Default="" Mode="ro" Description="Existing folder indexed in place during migration" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/storage/videos</Config>
+  <Config Name="PHOTOSTEAD_PUBLIC_URL" Target="PHOTOSTEAD_PUBLIC_URL" Default="" Mode="" Description="The address people reach Photostead at, e.g. https://photos.example.com (for single sign-on's return address). Empty: whatever address each visit uses" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PHOTOSTEAD_OIDC_ISSUER" Target="PHOTOSTEAD_OIDC_ISSUER" Default="" Mode="" Description="Single sign-on: the OpenID Connect provider's issuer URL (Authentik, Authelia, Keycloak, Pocket ID…). Empty: off" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PHOTOSTEAD_OIDC_CLIENT_ID" Target="PHOTOSTEAD_OIDC_CLIENT_ID" Default="" Mode="" Description="Single sign-on: the client id the provider gave Photostead" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PHOTOSTEAD_OIDC_CLIENT_SECRET" Target="PHOTOSTEAD_OIDC_CLIENT_SECRET" Default="" Mode="" Description="Single sign-on: the client secret" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+  <Config Name="PHOTOSTEAD_OIDC_NAME" Target="PHOTOSTEAD_OIDC_NAME" Default="single sign-on" Mode="" Description="Single sign-on: the name on the sign-in button (Sign in with …)" Type="Variable" Display="advanced" Required="false" Mask="false">single sign-on</Config>
+  <Config Name="PHOTOSTEAD_OIDC_NEW_ACCOUNTS" Target="PHOTOSTEAD_OIDC_NEW_ACCOUNTS" Default="" Mode="" Description="Single sign-on: on makes an account for someone the provider knows but Photostead doesn't (otherwise only existing accounts, matched by verified email)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PHOTOSTEAD_MAP" Target="PHOTOSTEAD_MAP" Default="" Mode="" Description="off hides the map (its tiles come from OpenFreeMap, which sees the areas you look at; places are named offline either way)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PHOTOSTEAD_UPLOAD_PIECE" Target="PHOTOSTEAD_UPLOAD_PIECE" Default="" Mode="" Description="Behind a reverse proxy that caps a request's size: the most a phone sends in one request, in MiB. Empty: a file goes whole (in 64 MiB pieces through Cloudflare, by itself)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PHOTOSTEAD_TRUSTED_PROXIES" Target="PHOTOSTEAD_TRUSTED_PROXIES" Default="" Mode="" Description="The reverse proxies whose X-Forwarded-For is believed, so wrong pairing codes and passwords count per person: addresses or ranges, private for the default, off for none. Empty: a proxy on this server, its Docker networks or the home network (loopback and private addresses)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User Photostead runs as" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group Photostead runs as" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>

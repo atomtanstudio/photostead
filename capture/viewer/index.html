@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forensic Archive — X Capture Viewer</title>
+    <link rel="stylesheet" href="viewer.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <div class="logo" aria-hidden="true">𝕏</div>
+          <div>
+            <h1>Forensic Archive</h1>
+            <p class="tagline">Captured tweets, rendered like X</p>
+          </div>
+        </header>
+
+        <div class="sidebar-controls">
+          <label class="sr-only" for="view-mode">View mode</label>
+          <select id="view-mode" aria-label="View mode">
+            <option value="all">All tweets (deduplicated)</option>
+            <option value="session">By capture session</option>
+          </select>
+          <select id="session-picker" class="hidden" aria-label="Capture session"></select>
+        </div>
+
+        <ul id="session-list" class="session-list" aria-label="Capture sessions"></ul>
+
+        <footer class="sidebar-footer">
+          <button type="button" id="btn-export-diagnostic" class="btn-secondary">Export diagnostic (small)</button>
+          <button type="button" id="btn-copy-diagnostic" class="btn-secondary">Copy diagnostic</button>
+          <button type="button" id="btn-export-text" class="btn-secondary">Export text thread</button>
+          <button type="button" id="btn-export-session" class="btn-secondary">Export session JSON</button>
+          <button type="button" id="btn-refresh" class="btn-secondary">Refresh</button>
+          <p id="stats-line" class="stats-line"></p>
+        </footer>
+      </aside>
+
+      <main class="feed" id="feed" aria-live="polite">
+        <div class="feed-placeholder" id="placeholder">
+          <p>Loading captures…</p>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

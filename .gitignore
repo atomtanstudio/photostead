@@ -1,0 +1,56 @@
+# Secrets: API keys live only in local .env files.
+.env
+.env.*
+!.env.example
+
+# Research, reports, plans and the first design prototype are kept on the developer's own machine,
+# with the personal library data they used (face data, embeddings, models).
+/research/
+/research_notes/
+/reports/
+/design/prototype/
+/docs/plans/
+/docs/v1-feature-decisions.md
+
+# Tooling
+.claude/settings.local.json
+.claude/launch.json
+node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+
+# Build output
+bin/
+web/dist/
+web/node_modules/
+web/*.tsbuildinfo
+
+# Python worker
+__pycache__/
+*.egg-info/
+.venv/
+
+# Xcode: per-person state and builds
+xcuserdata/
+*.xcresult
+ios/build/
+DerivedData/
+ios/Config/Local.xcconfig
+
+# Website (site/): build output, downloaded originals, the demo build of the web app
+site/node_modules/
+site/dist/
+site/.engine.mjs
+site/.wrangler/
+site/demo-library/.originals/
+site/demo-library/.server/
+web/dist-demo/
+
+# Data from running the compose file in place
+deploy/compose/photostead/
+
+# The desktop app's build (downloads, Postgres and ffmpeg builds, the app)
+desktop/build/
+worker/build/

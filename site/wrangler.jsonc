@@ -1,0 +1,27 @@
+// photostead.com on Cloudflare Workers: static assets only. No Worker code runs; Cloudflare serves
+// dist/ (made by `npm run build`) from its edge, with the headers in public/_headers.
+//
+//   wrangler deploy --env preview   a preview at photostead-site-preview.<your subdomain>.workers.dev
+//   wrangler deploy                 photostead.com
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "photostead-site",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    // /privacy serves /privacy/index.html (redirecting to /privacy/); unknown paths get /404.html.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  // Attaches the domain when deploying. www.photostead.com is its own small Worker that redirects here (www/).
+  "routes": [{ "pattern": "photostead.com", "custom_domain": true }],
+  "workers_dev": false,
+  "observability": { "enabled": false },
+  "env": {
+    "preview": {
+      "name": "photostead-site-preview",
+      "routes": [],
+      "workers_dev": true
+    }
+  }
+}

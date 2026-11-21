@@ -1,0 +1,159 @@
+<!-- {"title": "Support · Photostead", "description": "Help with Photostead and Photostead for iPhone: pairing, backups, getting to your library away from home, and how to reach us.", "path": "/support/"} -->
+<!doctype html>
+<html lang="en">
+<head>
+<!-- include:head -->
+</head>
+<body>
+<!-- include:header -->
+<main id="main" class="doc">
+  <p class="eyebrow">Support</p>
+  <h1>How can we help?</h1>
+  <p class="intro">Answers to common questions about Photostead and Photostead for iPhone are below. If you don’t find yours, write to us: a person reads every email.</p>
+
+  <div class="contact">
+    <p><b>hello@photostead.com</b>We usually reply within two business days.</p>
+    <a class="btn" href="mailto:hello@photostead.com?subject=Photostead%20support">Email support</a>
+  </div>
+
+  <h2 id="start">Getting started</h2>
+  <p>
+    Photostead has two parts: the <b>Photostead server</b>, which keeps your library on hardware you own (a home server, NAS or computer),
+    and <b>Photostead for iPhone</b>, which backs up your iPhone to it and lets you browse everything. The app needs a Photostead server to
+    pair with.
+  </p>
+  <p id="server">
+    <b>Getting a server:</b> the <a href="/install/">install guide</a> covers a home server or NAS (Unraid or Docker) and a Mac or Windows
+    PC. Once it’s running:
+  </p>
+  <ol>
+    <li>On your computer, open Photostead in a web browser and sign in.</li>
+    <li>Open <b>Devices &amp; remote access</b> and choose <b>Show a pairing code</b>.</li>
+    <li>On your iPhone, point the Camera at the QR code, tap the banner that appears, and confirm in Photostead. You can also type the code into the app.</li>
+    <li>Allow access to your photos. Backing up starts right away, newest first.</li>
+  </ol>
+  <p>Want to look around first? The <a href="/demo/">live demo</a> runs Photostead in your browser on a sample library.</p>
+
+  <h2 id="faq">Questions and answers</h2>
+
+  <details class="qa">
+    <summary>Do I need my own server?</summary>
+    <div>
+      <p>
+        Yes. Photostead keeps your library on hardware you control instead of in someone else’s cloud, so the app pairs with a Photostead
+        server run by you or someone in your household. If someone in your home already runs one, ask them for a pairing code. If not, the
+        <a href="/install/">install guide</a> walks you through setting one up on a home server, NAS, Mac or Windows PC.
+      </p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>How do I back up when I’m away from home?</summary>
+    <div>
+      <p>
+        At home, the app reaches your server on your home network. Away from home, it gets in through your server’s secure address once
+        whoever runs the server turns on remote access (<b>Devices &amp; remote access</b> → Tailscale, with Funnel on): pair the phone once at
+        home, and from then on it works from anywhere with nothing else to install. With Funnel off, install the Tailscale app on your iPhone
+        and sign in to the same tailnet as your server instead. The app tries each of your server’s addresses in turn and uses the one that
+        answers.
+      </p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Why hasn’t my backup finished?</summary>
+    <div>
+      <p>The pill under the Library’s title shows what’s happening. Some things to check:</p>
+      <ul>
+        <li><b>Wi-Fi:</b> backups use Wi-Fi only, unless you turn on <b>Use cellular data</b> in the app’s settings.</li>
+        <li><b>Background time:</b> iOS decides when apps may work in the background, usually overnight while the phone is charging. Opening the app speeds things up.</li>
+        <li><b>Swiping the app away</b> in the app switcher stops transfers that are under way. They pick up again the next time you open the app.</li>
+        <li><b>Photos access:</b> with limited access, only the photos you chose are backed up. To back up everything, allow full access in Settings → Photostead → Photos.</li>
+        <li><b>iCloud Photos:</b> originals that are only in iCloud are downloaded first, which takes longer on a slow connection.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Does Photostead change or delete anything on my iPhone?</summary>
+    <div>
+      <p>
+        No. The app reads your originals and sends a copy to your server. It never edits or deletes anything in your iPhone’s Photos library,
+        and it adds to it only when you save a photo or video from Photostead to Photos.
+        It backs up each item’s original (for a Live Photo, both the photo and its motion), not edits made on the phone.
+      </p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Can I bring in photos from Google Photos or Apple Photos?</summary>
+    <div>
+      <p>
+        Yes. From Google Photos, export your library at <b>takeout.google.com</b>, unzip it, and drop the <b>Takeout</b> folder onto Photostead
+        in your web browser. From Photos on a Mac, choose <b>File › Export › Export Unmodified Originals</b> with <b>Export IPTC as XMP</b> ticked,
+        then drop the folder in. Google’s export brings dates, descriptions, places, favorites and albums; Apple’s brings captions, keywords,
+        places and dates. Anything already in your library is kept only once. <b>Import</b> in Photostead’s sidebar shows every way in.
+      </p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>How do I turn off backups, or unpair the app?</summary>
+    <div>
+      <p>
+        Tap your picture at the top right, then turn off <b>Back up this iPhone</b>, or choose <b>Unpair this phone</b> to disconnect the app
+        from your server.
+        Unpairing doesn’t delete anything from your Photostead library or from your iPhone. To back up again, pair again with a new code.
+      </p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>How do I delete my data?</summary>
+    <div>
+      <p>
+        Your library lives on your own Photostead server, not with us, so it’s always in your control. To delete photos, move them to the trash
+        in Photostead and empty it. To disconnect the app, unpair it, then delete it to remove what it keeps on your iPhone (unpair first, so the
+        pairing token goes too). Removing a person’s whole account from a server isn’t in Photostead yet; write to us if you need it. We don’t hold
+        any of your data; if you’ve emailed us and want that correspondence deleted, just ask. See the <a href="/privacy/">Privacy Policy</a> for details.
+      </p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Which devices does the app support?</summary>
+    <div>
+      <p>Photostead for iPhone needs iOS 17 or later. Photostead on the web works in current versions of Safari, Chrome, Edge and Firefox.</p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>Is my library private?</summary>
+    <div>
+      <p>
+        Yes. Your photos go only to your own server, and the app has no analytics, advertising or tracking. Face recognition, search, Ask and
+        place names all work on your server; only the Places map’s background comes from a map service. Read more in the
+        <a href="/privacy/">Privacy Policy</a>.
+      </p>
+    </div>
+  </details>
+
+  <details class="qa">
+    <summary>How do I report a problem or suggest something?</summary>
+    <div>
+      <p>
+        Email <a href="mailto:hello@photostead.com?subject=Photostead%20feedback">hello@photostead.com</a>. For a problem, it helps to include
+        your iPhone model and iOS version, what you were doing, and what you expected to happen. Screenshots are welcome.
+      </p>
+    </div>
+  </details>
+
+  <div class="contact">
+    <p><b>Still stuck?</b>Write to us and we’ll help you sort it out.</p>
+    <a class="btn" href="mailto:hello@photostead.com?subject=Photostead%20support">Email support</a>
+  </div>
+</main>
+<!-- include:footer -->
+<script src="/assets/site.js?v={{version}}" defer></script>
+</body>
+</html>
