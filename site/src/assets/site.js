@@ -159,3 +159,18 @@ document.querySelectorAll('[data-copy]').forEach((b) =>
     }, 1800);
   }),
 );
+
+// The launch film: a play button over its poster (the browser's own controls take over once it plays).
+document.querySelectorAll('[data-film]').forEach((fig) => {
+  const video = fig.querySelector('video');
+  const button = fig.querySelector('.film-play');
+  if (!video || !button) return;
+  video.controls = false; // until it's started, the button says what this is
+  button.hidden = false;
+  button.addEventListener('click', () => {
+    video.controls = true;
+    video.play();
+  });
+  video.addEventListener('play', () => { button.hidden = true; video.controls = true; });
+  video.addEventListener('ended', () => { button.hidden = false; });
+});

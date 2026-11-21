@@ -118,6 +118,16 @@ html.calm .s-text::after, html.calm .s-grid figure { animation: none; }
 .window { position: relative; margin: 72px auto 0; width: min(1240px, 100% - 2 * var(--gutter)); border-radius: 18px; overflow: hidden; background: #0b0b0c;
   border: 1px solid rgba(255, 255, 255, 0.14); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 60px 160px -40px rgba(0, 0, 0, 0.9), 0 30px 80px -50px rgba(120, 140, 255, 0.25); }
 .window img { width: 100%; height: auto; }
+.window.film { margin-top: 48px; background: #f4f4f2; } /* the film's own paper, behind its poster */
+.window.film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+.film-play { position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 10px;
+  height: 54px; padding: 0 24px 0 20px; border: 0; border-radius: 999px; background: #0b0b0b; color: #f4f4f2; font: 600 16px/1 var(--font);
+  cursor: pointer; box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.55); transition: transform 0.25s var(--ease); }
+.film-play:hover { transform: translateX(-50%) translateY(-1px); }
+.film-play svg { width: 18px; height: 18px; fill: currentColor; stroke: none; }
+.film-time { margin-left: 4px; font-family: var(--mono); font-size: 13px; font-weight: 400; opacity: 0.6; }
+.film-play[hidden] { display: none; }
+@media (max-width: 600px) { .film-play { height: 42px; padding: 0 18px 0 15px; font-size: 14px; bottom: 6%; } .film-play svg { width: 15px; height: 15px; } }
 .window.light { background: #fff; border-color: rgba(0, 0, 0, 0.12); box-shadow: 0 50px 120px -50px rgba(0, 0, 0, 0.45); }
 .hero .window { transform-origin: 50% 0; }
 @supports (animation-timeline: view()) {

@@ -30,6 +30,21 @@
     </figure>
   </section>
 
+  <!-- The launch film (site/public/film: 1080p H.264 under the 25 MB a file can be here) -->
+  <section id="film" class="sec tight" aria-labelledby="film-title">
+    <div class="wrap center">
+      <p class="eyebrow" data-reveal>The film</p>
+      <h2 id="film-title" class="h2" data-reveal>See it in <em class="s">two</em> minutes.</h2>
+    </div>
+    <figure class="window film" data-reveal data-film>
+      <video controls preload="none" playsinline poster="/film/poster.webp" width="1920" height="1080"
+        aria-label="Photostead’s launch film: the web app and Photostead for iPhone, working together on a sample household’s photos. Words on screen, with music.">
+        <source src="/film/photostead.mp4" type="video/mp4" />
+      </video>
+      <button type="button" class="film-play" hidden>{{icon:play}}<span>Play the film <span class="film-time">2:16</span></span></button>
+    </figure>
+  </section>
+
   <section class="sec tight" aria-label="Photostead at a glance">
     <div class="wrap facts" data-reveal>
       <div><b>100,000+</b><span>items in one library, and the timeline stays smooth</span></div>
