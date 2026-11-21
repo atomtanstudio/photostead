@@ -118,7 +118,10 @@ cp -R "$ROOT/web/dist" "$RT/web"
 echo "== the launcher"
 (cd "$ROOT/desktop" && CGO_ENABLED=1 go build -trimpath -ldflags="-s -w" -o "$APP/Contents/MacOS/Photostead" .)
 cp "$ROOT/desktop/assets/Photostead.icns" "$APP/Contents/Resources/"
-VERSION=$(cd "$ROOT" && git describe --tags --always 2>/dev/null || echo dev)
+# The version: from the release tag on this commit (v1.0.0 → 1.0.0), otherwise 0.0.0 and the commit.
+TAG=$(cd "$ROOT" && git describe --tags --exact-match --match 'v[0-9]*' 2>/dev/null || true)
+if [ -n "$TAG" ]; then SHORT=${TAG#v}; VERSION=$SHORT; else SHORT=0.0.0; VERSION=$(cd "$ROOT" && git rev-parse --short HEAD 2>/dev/null || echo dev); fi
+echo "   version $SHORT ($VERSION)"
 cat > "$APP/Contents/Info.plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -130,7 +133,7 @@ cat > "$APP/Contents/Info.plist" <<PLIST
   <key>CFBundleExecutable</key><string>Photostead</string>
   <key>CFBundleIconFile</key><string>Photostead</string>
   <key>CFBundlePackageType</key><string>APPL</string>
-  <key>CFBundleShortVersionString</key><string>1.0</string>
+  <key>CFBundleShortVersionString</key><string>$SHORT</string>
   <key>CFBundleVersion</key><string>$VERSION</string>
   <key>LSMinimumSystemVersion</key><string>14.0</string>
   <key>LSUIElement</key><true/>
