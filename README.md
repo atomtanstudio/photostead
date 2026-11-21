@@ -4,6 +4,8 @@ A self-hosted home for your photos and videos. It's built for a household's libr
 photographer's toolkit, and it treats AI as part of the library: AI organizes your photos (faces,
 search, captions), and AI-made images and videos are first-class media with their prompts kept.
 
+https://github.com/user-attachments/assets/0ec50f60-2721-475e-92e3-0324465f4780
+
 Photostead runs on your own server (an Unraid box, a NAS, any Linux machine with Docker) or as an
 app on a Mac or Windows PC. Your originals stay byte for byte, in plain folders you can browse
 without the app.
