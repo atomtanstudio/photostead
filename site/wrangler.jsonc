@@ -1,5 +1,6 @@
-// photostead.com on Cloudflare Workers: static assets only. No Worker code runs; Cloudflare serves
-// dist/ (made by `npm run build`) from its edge, with the headers in public/_headers.
+// photostead.com on Cloudflare Workers: static assets. Cloudflare serves dist/ (made by `npm run build`) from its
+// edge, with the headers in public/_headers. The one piece of Worker code, worker.js, runs only for /film/* and
+// answers byte-range requests for the launch film (Safari plays no video without them).
 //
 //   wrangler deploy --env preview   a preview at photostead-site-preview.<your subdomain>.workers.dev
 //   wrangler deploy                 photostead.com
@@ -7,8 +8,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "photostead-site",
   "compatibility_date": "2026-10-01",
+  "main": "worker.js",
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/film/*"],
     // /privacy serves /privacy/index.html (redirecting to /privacy/); unknown paths get /404.html.
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"

@@ -88,7 +88,14 @@ cd site && npm run release
 Publishing runs on GitHub (`.github/workflows/site.yml`) once two repository secrets are set,
 `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`: every push to `main` that changes `site/` or `web/`
 publishes a preview at `photostead-site-preview.<your subdomain>.workers.dev`, and Actions → Website →
-Run workflow with target `photostead.com` publishes the real site.
+Run workflow with target `photostead.com` publishes the real site. Without the token (the public repo has
+only the account ID so far), publish from a Mac where `wrangler` is signed in: `npm run deploy`.
+
+The launch film is in `public/film/`: a 1080p H.264 copy under the 25 MB a Cloudflare asset can be, and its
+poster. Cloudflare's assets answer a byte-range request with the whole file, which Safari won't play, so
+`worker.js`, the site's only Worker code, answers ranges for `/film/*` and nothing else
+(`run_worker_first` in `wrangler.jsonc`). The README's copy of the film (720p, under GitHub's 10 MB) is a
+GitHub attachment, uploaded with `gh pr create --attach`.
 
 Day to day:
 
