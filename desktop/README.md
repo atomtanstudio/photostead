@@ -13,7 +13,9 @@ quit. The plan and its reasoning are in `docs/plans/desktop-app-plan.md` (not in
   its own, and stops both cleanly (the server by closing its input, `PHOTOSTEAD_STOP_ON_STDIN`, then
   `pg_ctl stop -m fast`). On the Mac Postgres listens only on a socket in `/tmp`; on Windows on
   `127.0.0.1:54329`, with passwords made on first run.
-- `mac/build.sh`: builds `build/mac/Photostead.app` and a `.dmg` (Apple silicon, macOS 14+).
+- `mac/build.sh`: builds `build/mac/Photostead.app` and a `.dmg` (Apple silicon, macOS 26+: Homebrew's
+  libvips and its libraries are built for the macOS they're installed on, and the build checks that
+  nothing inside needs a newer one than the app's `MACOS_MIN`).
   PostgreSQL 18 with pgvector and an LGPL ffmpeg (VideoToolbox, no libx264) are built from source
   once; libvips and its HEIC module come from Homebrew and are copied in by `mac/relink.py`, which
   points every library reference inside the app. Signed with the keychain's Developer ID
@@ -57,6 +59,8 @@ the run's artifact.
 
 ## Not yet
 
+- macOS 14 and 15: libvips and its libraries built here for them instead of taken from Homebrew,
+  and an OpenCV wheel built for them (today's is for 15).
 - A code-signing certificate for Windows: until then SmartScreen warns about an unrecognized app
   ("More info" → "Run anyway").
 - Running before anyone logs in (a launch daemon, a Windows service), updates (Sparkle), a trimmed

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Builds Photostead.app for Apple silicon Macs (macOS 14 or later): the launcher with its menu-bar
+# Builds Photostead.app for Apple silicon Macs (macOS 26 or later): the launcher with its menu-bar
 # icon, and in Contents/Resources/runtime everything Photostead runs, so nothing is needed from
 # Homebrew, Docker or anywhere else on the Mac that runs it:
 #
@@ -31,7 +31,10 @@ APP="$OUT/Photostead.app"
 RT="$APP/Contents/Resources/runtime"
 JOBS=$(sysctl -n hw.ncpu)
 export DEVELOPER_DIR="${DEVELOPER_DIR:-/Applications/Xcode.app/Contents/Developer}"
-export MACOSX_DEPLOYMENT_TARGET=14.0
+export MACOSX_DEPLOYMENT_TARGET=14.0 # what's built here (Postgres, ffmpeg, the server, the launcher)
+# The oldest macOS the app runs on: the newest any piece inside it was built for. Homebrew's libvips
+# and its libraries are built for the macOS they're installed on (26 here); checked after signing.
+MACOS_MIN=26.0
 mkdir -p "$SRC"
 
 fetch() { # url [name] → file in $SRC
@@ -135,7 +138,7 @@ cat > "$APP/Contents/Info.plist" <<PLIST
   <key>CFBundlePackageType</key><string>APPL</string>
   <key>CFBundleShortVersionString</key><string>$SHORT</string>
   <key>CFBundleVersion</key><string>$VERSION</string>
-  <key>LSMinimumSystemVersion</key><string>14.0</string>
+  <key>LSMinimumSystemVersion</key><string>$MACOS_MIN</string>
   <key>LSUIElement</key><true/>
   <key>LSArchitecturePriority</key><array><string>arm64</string></array>
   <key>NSHumanReadableCopyright</key><string>Photostead</string>
@@ -162,6 +165,17 @@ for f in "$RT"/bin/* "$RT"/lib/*.dylib "$RT"/lib/vips-modules-*/*.dylib "$RT"/po
   done
 done
 [ $bad = 0 ] || { echo "Some libraries the app needs aren't in it." >&2; exit 1; }
+# And nothing inside was built for a newer macOS than the app says it runs on (MACOS_MIN).
+newest=0
+while IFS= read -r -d '' f; do
+  file -b "$f" | grep -q Mach-O || continue
+  v=$(otool -l -arch arm64 "$f" 2>/dev/null | awk '/LC_BUILD_VERSION|LC_VERSION_MIN_MACOSX/ {b = 1} b && /minos|^ *version/ {print $2; exit}')
+  [ -n "$v" ] || continue
+  if [ "$(printf '%s\n%s\n' "$v" "$MACOS_MIN" | sort -V | tail -1)" != "$MACOS_MIN" ]; then echo "  needs macOS $v: $f"; bad=1; fi
+  if [ "$(printf '%s\n%s\n' "$v" "$newest" | sort -V | tail -1)" = "$v" ]; then newest=$v; fi
+done < <(find "$APP/Contents" -type f \( -perm -u+x -o -name "*.dylib" -o -name "*.so" \) -print0)
+[ $bad = 0 ] || { echo "Some pieces need a newer macOS than $MACOS_MIN (MACOS_MIN)." >&2; exit 1; }
+echo "   the newest macOS any piece needs: $newest (the app says $MACOS_MIN)"
 
 # Signed with the Developer ID in the keychain when there is one (PHOTOSTEAD_SIGN_ID picks another,
 # "-" forces ad hoc), with the hardened runtime and a secure timestamp, so it can be notarized

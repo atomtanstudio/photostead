@@ -122,7 +122,7 @@ then array), the database and thumbnails on the cache pool. Images are published
 The same server as an app, without Docker: it starts its own database, the server and its AI worker,
 with a menu-bar (Mac) or tray (Windows) icon to open Photostead, pair a phone and choose where
 originals go. Download it from the [latest release](https://github.com/atomtanstudio/photostead/releases/latest):
-`Photostead.dmg` for a Mac with Apple silicon (macOS 14 or later), `Photostead-windows.zip` for
+`Photostead.dmg` for a Mac with Apple silicon (macOS 26 or later), `Photostead-windows.zip` for
 64-bit Windows 10 or 11. How it's built is in [desktop/](desktop/README.md).
 
 ### Your AI assistant (MCP)
