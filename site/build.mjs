@@ -92,14 +92,15 @@ const icon = (name) => {
   return `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
 };
 
-// Photostead for iPhone's App Store page. Empty until the app is released: then the pages'
-// {{appStore:…}} notes ("Coming soon …") become Apple's App Store badge linking to it. The badge is
-// Apple's own artwork, unaltered, from Apple's marketing tools (public/img/app-store-badge.svg).
-const APP_STORE_URL = process.env.APP_STORE_URL ?? '';
+// Photostead for iPhone's App Store page (live since 2026-11-20). The pages' {{appStore:…}} places
+// show Apple's App Store badge linking to it; with APP_STORE_URL= (empty) they say "Coming soon …"
+// instead. The badge is Apple's own artwork, unaltered, from Apple's marketing tools
+// (public/img/app-store-badge.svg, black, US-UK).
+const APP_STORE_URL = process.env.APP_STORE_URL ?? 'https://apps.apple.com/app/photostead/id6835919619';
 const appStore = (soon) => {
   if (!APP_STORE_URL) return `<span class="btn btn-soon" role="note">${icon('phone')} ${esc(soon)}</span>`;
   if (!existsSync(join(PUBLIC, 'img/app-store-badge.svg'))) throw new Error('APP_STORE_URL is set, but Apple’s badge (public/img/app-store-badge.svg) is missing');
-  return `<a class="store" href="${esc(APP_STORE_URL)}"><img src="/img/app-store-badge.svg" alt="Download on the App Store" height="54" /></a>`;
+  return `<a class="store" href="${esc(APP_STORE_URL)}"><img src="/img/app-store-badge.svg" alt="Download on the App Store" width="162" height="54" /></a>`;
 };
 
 /** The hero's wall: columns of the library's photos, each column three times over so it can loop

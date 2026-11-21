@@ -135,10 +135,10 @@ What Apple's rules mean for this site:
   landing page shows the web app's screens in plain windows, and the iPhone section is an illustration
   of a backup, not a phone. Real screenshots of Photostead for iPhone can go there once they're taken in
   the simulator: plain, with no drawn device or status bar around them.
-- **The App Store badge** goes up once the app is live: the official artwork from Apple's marketing
-  tools, unaltered, in `public/img/app-store-badge.svg`, linked to the app's App Store page. Until then
-  the pages say "Coming soon", in text. Both come from the `{{appStore:…}}` placeholders: set
-  `APP_STORE_URL` in `build.mjs` (or in the environment, to try it) and every one becomes the badge.
+- **The App Store badge:** the official artwork from Apple's marketing tools, unaltered, in
+  `public/img/app-store-badge.svg`, linked to the app's App Store page (`APP_STORE_URL` in
+  `build.mjs`, live since 2026-11-20). Every `{{appStore:…}}` placeholder draws it; with
+  `APP_STORE_URL=` empty they say "Coming soon", in text, instead.
 - **Names:** "Photostead for iPhone", never "iPhone app"; "iPhone" never in capitals, so the iPhone
   section's label uses the `plain` eyebrow. The trademark lines are in the footer and the Terms.
 - **No placeholders** (guideline 2.1): every link and address on the site must work when the app is submitted.
